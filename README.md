@@ -1,2 +1,1 @@
-# Notes
-Notes on anything I'm currently learning...
+
