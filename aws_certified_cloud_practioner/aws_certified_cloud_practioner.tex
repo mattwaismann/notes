@@ -1,0 +1,111 @@
+%PREAMBLE
+\documentclass{article}% use option titlepage to get the title on a page of its own.
+\title{AWS Certified Cloud Practioner Exam Notes}
+\author{Matt Waismann}
+
+%MAIN
+\begin{document}
+\maketitle
+\section{Introduction}
+\subsection{Exam Blueprint}
+The exam validates ability to:
+\begin{itemize}
+    \item Value of AWS Cloud
+    \item Understand and expalin the AWS shared responsility model
+    \item Understand AWS Cloud security best practices
+    \item Understand AWS Cloud costs, economics, and billing practices
+    \item Identify most core services
+    \item Identify common AWS use cases
+\end{itemize}
+Exam conent:
+\begin{itemize}
+    \item Multiple choice (out of 4 questions)
+    \item Multiple response (you will be given how many answers of 5 or more are correct)
+\end{itemize}
+Domain Areas:
+\begin{itemize}
+    \item Cloud Concepts (26\%): AWS cloud value propostion, cloud economics, and cloud architecture design principles
+    \item Technology (33\%): Methods of deployments, global infrastructure, AWS services, and technology support
+    \item Security and Compliance (25\%): shared responsility model, security and compliance concepts, and access management capabilities
+    \item Billing and Pricing (16\%): Comparing pricing models, account structures, billing, pricing, and billing support resources
+\end{itemize}
+\textbf{Minimum passing score: 700 (70\%)}
+
+\section{Foundations of Cloud Computing}
+\subsection{Understanding Cloud Computing}
+AWS has thousands of servers grouped together in places called \textbf{Data Centers}. Cloud computing is the delivery of computing services over the internet through these servers. Common categories are:
+\begin{itemize}
+    \item Compute: EC2 and Lambda
+    \item Networking: VPC and Direct Connect
+    \item Storage: S3 and EBS
+    \item Analytics: Athena and Redshift
+    \item Development: Cloud9 and CodeCommit
+    \item Security: IAM and Macie
+    \item Databases: RDS and DynamoDB
+\end{itemize}
+There exist a Whitepaper called Overview of Amazon Web Services that is 72 pages long and gives details on all the services.
+To maximize the use of a server, AWS allows you to share a AWS server with other customers through a process called \textbf{Virtualization}. Virtualization lets you divide hardware resources opn a single physical server into smaller untis called \textbf{Virtual Machines}, each with its own storage, OS, and network connection. The usage of these services is billed \textbf {On Demand} (no long-term contracts or upfront payments) and \textbf{Pay as you Go} (billed by the hour or second of usage).
+
+\subsection{Advantages of Cloud Computing}
+There are 6 advantages to cloud computing: 
+\begin{enumerate}
+    \item Go global in minutes. AWS allows applications to be deployed to multiple regions at the click of the button
+    \item Stop spending money running and maintaining data Centers
+    \item Benefit from massive economies of scale
+    \item Increase speed and agility. This gives faster time to market.
+    \item Stop guessing about capacity. Your capacity is matched exactly to your demand.
+    \item Trade capital expense for variable expense. Instead of the upfront costs of data centers you pay for what you use when you use it.
+\end{enumerate}
+Here are the benefits in technical terms:
+\begin{enumerate}
+    \item High Availability. A system which operates continuously without failure for a long time.
+    \item Elasticity. You don't need to plan ahead of time with how much capacity you need. You can provision only what you need, and then grow and shrink based on demand.
+    \item Agility. AWS services help you innovate faster and give a faster speed to market.
+    \item Durability. Durability is all about long term data protection. This means your data will remain intact without corruption
+\end{enumerate}
+\subsection{Cloud Computing and Deployment Models}
+There are 3 common cloud computing models:
+\begin{enumerate}
+    \item Infrastrucutre. Fundamental building blocks that can be rented e.g. EC2. Analogy -> web hosting
+    \item Software as a Service (SaaS). Complete Applications e.g. SageMaker which does Machine Learning for you. Analogy -> email provider
+    \item Platform as a Service (PaaS). Used by developers. Analogy -> A service gives you tools to build a storefront website. 
+\end{enumerate}
+There are 3 common cloud deployment models:
+\begin{enumerate}
+    \item Private Cloud (aka "on-premises"). Exists in your internal data center. DOesn't offer the advantages of cloud computing.
+    \item Public Cloud (e.g. AWS). Offered by AWS. You get all the benefits listed earlier
+    \item Hybrid Cloud. A mix of private and public cloud. Highly sensitive data is locally stored but the app that runs on that server is run on AWS services. AWS \textbf{Direct Connect} links internal data centers with AWS services
+\end{enumerate}
+\subsection{Leveraging the AWS Global Infrastructure}
+\textbf{Regions} are physical locations. AWS logically groups its Regions into \textbf{geographic locations} (e.g. US West, US East, Europe, South America, Asia Pacific).
+It is best practice to use regions close to where the users of the services will be. Regions have several characteristics. Each region is fully independent and isolated (i.e. if one region is impacted, the others will not be) and regions are resource and service specific (i.e. your services live in a region and cannot necessarliy be replicated across other regions) \\ \\
+
+\textbf{Availability Zones} consist of one or more physcially separated data centers, each with redundant power, networking, and connectivity, housed in separate facilites. An example:
+\begin{itemize}
+    \item Geographic Location: US East
+    \item Region: Ohio
+    \item Availability Zone: 2B
+\end{itemize}
+
+N. Virgina Region has 6 Availability Zones. In Availability Zone US-EAST-1B there are 4 data centers. Each Availability Zone has multiple data centers. \\ \\
+characteristics of AZs:
+\begin{itemize}
+    \item Physcially separated (different power grids)
+    \item All AZs in the same region are connected through low-latency links 
+    \item Fault tolerant. If one AZ fails the others won't
+    \item Allows for high availability. If one AZ fails your application can still run on another one
+    \item 
+\end{itemize}
+
+\textbf{Edge Locations}. There are way more Edge Locations than AZs and Regions. These Edge Locations are like mini data centers that cache content instead of launching resource like EC2. They servce to reduce latency and speed up delivery of your applications. \textbf{latency} is the time that 
+passes between a user request and the resulting response.  
+
+\subsection{Exploring Your AWS Account}
+The \textbf{AWS Management Console} allows you to access your AWS account and manage applications running in your account from a web browser. The \textbf{Root User} is created when you intially sign up your account. This user has access to everything, therefore it is best practice to almost never use the root user and instead create a 
+seperate user for your day-to-day activities. The Root User will need to be used to delete a AWS account. Protect the root user with \textbf{Multi-Factor Authentication (MFA)}. \\ \\
+
+
+
+
+
+\end{document}
