@@ -101,11 +101,148 @@ characteristics of AZs:
 passes between a user request and the resulting response.  
 
 \subsection{Exploring Your AWS Account}
-The \textbf{AWS Management Console} allows you to access your AWS account and manage applications running in your account from a web browser. The \textbf{Root User} is created when you intially sign up your account. This user has access to everything, therefore it is best practice to almost never use the root user and instead create a 
+The \textbf{AWS Management Console} allows you to access your AWS account and manage applications running in your account from a web browser. You will see a region at the top right and the services listed in the management console will be the services available in that region. The \textbf{Root User} is created when you intially sign up your account. This user has access to everything, therefore it is best practice to almost never use the root user and instead create a 
 seperate user for your day-to-day activities. The Root User will need to be used to delete a AWS account. Protect the root user with \textbf{Multi-Factor Authentication (MFA)}. \\ \\
 
+Within the \textbf{Identity and Acess Managment (IAM)} service you can see all your users (including the root user) and all security settings. \\ \\ 
+
+\textbf{Virtual Private Cloud} is a service that you should set up right away. This is a way to create a secure private network (your own slice of the cloud) and within the network you deploy the resources you want to protect. If you deploy a resource and don't select a VPC there's a VPC already set up for you and AWS will automatically place the service within that VPC. \\ \\ 
+
+\textbf{AWS Command Line Interface AWS (CLI) } allows you to access your AWS account through a \textbf{terminal} or \textbf{command} window. Developers use the CLI more than the console. \\ \\
+
+\textbf{Programmatic Access} provides access to your AWS resources through an application or a tool like the CLI. Example of programmatic ways to access your account:
+\begin{enumerate}
+    \item CLI - a terminal session
+    \item Application Code - AWS services can be accessed from application code using SDKs and programmatic calls
+    \item \textbf{Software Development Kits (SDKs)} allow you to access AWS services from popular langauges from popular languages like Python, Java, C\#, and more.  
+\end{enumerate}
+
+\section{Technology}
+\subsection{Exploring Compute Services (EC2)}
+\textbf{EC2} allows you to rend and manage virtual servers in the cloud. You have elastic compute power (adjusts based on need) and it is compute/processing power in the cloud.
+\textbf{Servers} are the physcial compute hardware running in a data center. EC2 \textbf{instances} are the virtual servers running on these physical servers. Insatances are not considered serverless.
+More on EC2: 
+\begin{enumerate}
+    \item You can provision an EC2 instance at the click of a button
+    \item You can use a preconfigured template called an \textbf{Amazon Machine Image (AMI)} to launch your instance. 
+    \item You can deploy your applications directly to your EC2 instances
+    \item You recieve 750 compute hours per month on the Free Tier plan
+\end{enumerate}
+
+Use cases for EC2:
+\begin{itemize}
+    \item Deploy a database to EC2 which gives you full control over the database
+    \item Deploy a web application to multiple AZs
+\end{itemize}
+
+Methods to Access an EC2 Instance:
+\begin{itemize}
+    \item AWS Management Console - configure and manage instances through web browser
+    \item Secure Shell (SSH) - establish a secure connection to your instance from your local laptio
+    \item EC2 Insance Connect (EIC) - EIC allos you to use IAM policies to control SSH access to your instances, removing the need to manage SSH keys.
+    \item AWS Systems Manager - Systems Manager allows you to maange your EC2 instances via a web browswer or CLI
+\end{itemize}
+The most common way to connect to Linux EC2 instances is via Secure Shell (SSH):
+\begin{enumerate}
+    \item Generate a key pair - private key and public key which proves your identity when connecting to the EC2 instances
+    \item SSH client on laptop uses the private key and the EC2 instance uses the public key
+\end{enumerate}
+EC2 Pricing Options:
+\begin{enumerate}
+    \item \textbf{On-Demand} - the typical model where you use a fixed price which is billed down to the second. Pay for what you use. Use an on demand instance when:
+    \begin{enumerate}
+        \item You care about low cost without any upfront payment
+        \item YOur applications have unpredictable workloads that can't be interrupted
+        \item Your applications are under Development
+        \item Your workloads will not run longer than a year
+    \end{enumerate}
+    \item \textbf{Spot instances} - let you take advantage of unused EC2 capacity for a very nice discount (90\%). Your request is only fulfilled if capcity is available. Use Spot Instances when:
+    \begin{enumerate}
+        \item When you are not concerned about the start or stop time of your application
+        \item Your workloads can be interrupted
+        \item Your application is only feasible at very low compute prices
+    \end{enumerate}
+    \item \textbf{Reserved Instances} - RIs allow you to commit to a specific instance type in particular Region for 1 or 3 years. Use a RI when:
+    \begin{enumerate}
+        \item Your applicatoin has steady state usage and you can commit to 1 or 3 years
+        \item Upfront payment for a discount (All Upfront, Partial Upfront, No Upfront)
+        \item Your applicaton requires a capacity reservation
+    \end{enumerate}
+    \item \textbf{Dedicated Hosts} allow you to pay for a physical server that is fully dedicated to running your instances. Use a Dedicated Host when:
+    \begin{enumerate}
+        \item You want to bring your own server-bound software liscense from vendors like Microsoft or Oracle
+        \item You have regulatory or corporate compliance requirements around tenancy model (\textbf{Multi-tenancy} is when the server is not shared with other customers.)
+    \end{enumerate}
+    \item Remember a Dedicated Host is different from a Dedicated Instance (One is on the full server the other is on a virtual machine or instance that runs on the host)
+    \item Savings plan - allows you to commit to compute usage (measured per hour) for 1 or 3 years. This is not a RI because your only commiting to a certain amount of usage not a specific instance. A savings plan is not a commitment to a dedicated host, just to compute services like EC2, Fargate, and Lambda. Use Savings Plans when:
+    \begin{enumerate}
+        \item You want to lower your bill across multiple compute services
+        \item You want the flexibility to change compute services, instance types, operating systems, or Regions
+    \end{enumerate}
+\end{enumerate}
+Features of EC2:
+\begin{enumerate}
+    \item \textbf{Elastic Load Balances} - Balances the load (requests/traffic) across servers. The types of load balancers are \textbf{Classic, Application, Gateway, and Network}
+    \item \textbf{EC2 Auto Scaling} - adds or replaces EC2 instances automatically across AZs, based on need and changing demand. This is the concept of \textbf{horizontal scaling} - adds or replaces EC2 instances automatically across AZs, based on need and changing demand. 
+    This is not \textbf{Vertical Scaling} which is upgrading an EC2 instance by adding more power (CPU, RAM) to an existing server.
+\end{enumerate}
+
+\subsection{AWS Lambda}
+\textbf{Lambda} is a serverless compute service that lets you run code wihout managing servers. You other application code, called \textbf{functions}, using many popular languages.
+Lambda is serverless (don't have to manage serveres like with EC2) and it scales automatically. Developers love Lambda because they don't don't need to worry about patching, provisioning, and
+scaling servers. \textbf{Serverless} simply means AWS manages the servers for you and you cannot access them. \\ \\
+Use cases:
+\begin{enumerate}
+    \item Real-time file processing - A CSV is uploaded to S3 bucket then the upload triggers a Lambda function to read the file and store that data in a DynamoDB Table.
+    \item Sending email notifications - An action can trigger a lambda function which triggers SNS which sends an email
+    \item Backend business logic
+\end{enumerate}
+Features:
+\begin{enumerate}
+    \item Supports languages like Java, Go, PowerShell, Node.js, C\#, Python, and Ruby
+    \item You author code using your favorite IDE or via the console
+    \item Lambda can execute your code in response to events 
+    \item Lambda functions have a 15-minute timeout
+\end{enumerate}
+Pricing Model:
+\begin{enumerate}
+    \item Compute time
+    \item Request count 
+    \item Free tier for 1,000,000 requests
+\end{enumerate}
+
+\subsection{Additional Compute Services}
+\textbf{Fargate} is a serverless compute engine for containers. Fargate allows you to manage containers like Docker.
+Fargate scales automatically and is serverless. \\ \\
+\textbf{Lightsail} allows you to quickly launch all the resources you need for small projects. Deploy configured applications, like WordPress websites, at the click of a button. Simple to use for people with no cloud experience. Includes a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP.
+It's designed for small applications. \\ \\ 
+\textbf{AWS Outposts} allows you to run cloud services in your internal data center. AWS delivers and installs servers in your internal data center. Supports workloads that need to be on premises. Supports the hybrid deployment model. \\ \\
+\textbf{AWS Batch} allows you to process large workloads in smaller chunks (or batches). Runs hundreds and thousands of smaller batch processing jobs. Dynamically provisions instances based on volume. 
 
 
+
+\subsection{Leveraging Storage Services: S3}
+\textbf{S3} is an object sotrage service for the cloud that is highly available. \textbf{Objects} (or files) are stored in \textbf{buckets} (or directories). Millions of objects can be held per bucket. 
+Objects can be public or private. Objects can be uploaded through code, the CLI, or the console. You can set security at the bucket level or object level using \textbf{access control lists (ACLs)}, \textbf{bucket policies}, or \textbf{access point policies}. You can enable \textbf{versioning} to create multiple versions of your file in order to protect against deletion or access a previous version. You can also use \textbf{S3 access logs} to track the access to your bucket. S3 is regional service but each bucket name must be globally unique. You can also setup S3 to have your data replicated across regions. \\ \\
+
+S3 Storage Classes:
+\begin{enumerate}
+    \item S3 Standard - General-purpose storage, recommended for frequently accessed data
+    \item S3 Intelligent-Tiering - Automatically moves your data to the most cost-effective storage class, recommended for data with unkown or changing access patterns
+    \item S3 Standard Infrequent Access - Data accessed less frequently but requires rapid access, a bit cheaper than S3 Standard, recommended for long-live data that is infrequently accessed but millisecond access when needed.
+    \item S3 One Zone-Infrequent Acess - Like the above but all the data is in one availability zone so if that AZ gets destroyed the data will be gone, recommended for data that is easy to recreate, infrequently accessed
+    \item S3 Glacier - Long-term data storage and archival for lower costs. Data retrieval takes longer, can take several hours, reccomended for long term backups, very cheap.
+    \item S3 Glacier Deep Archive - Like S3 Glacier but longer access times but retrieval is 12 hours or 48 hours, cheapest option of all, reccomended for data on regulatory compliance.
+    \item S3 Outposts - provides object storage on-premises, reccomended for data that needs to be kept local, demanding performance needs.
+\end{enumerate}
+
+Use cases:
+\begin{enumerate}
+    \item Static websites - deploy static websites to S3 and use CloudFront for global distribution.
+    \item Data archive - Archive data using Amazon Glacier as a storage option for S3
+    \item Analytics systems - Store data in Amazon S3 for use with analytics services like Redshift (Data Warehousing) and Athena (Query your data in S3 using standard SQL)
+    \item Mobile applications - Mobile application users can upload files to an Amazon S3 bucket
+\end{enumerate}
 
 
 \end{document}

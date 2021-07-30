@@ -1,0 +1,156 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  29 JUL 2021 22:03
+entering extended mode
+**c:/Users/mattwais/Desktop/notes/aws_certified_cloud_practioner/aws_certified_cloud_practioner.tex
+(c:/Users/mattwais/Desktop/notes/aws_certified_cloud_practioner/aws_certified_cloud_practioner.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-07-12> (C:\Users\mattwais\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Users\mattwais\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (C:\Users\mattwais\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count190
+\l__pdf_internal_box=\box50
+) (aws_certified_cloud_practioner.aux)
+\openout1 = `aws_certified_cloud_practioner.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
+ [1
+
+{C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 191--195
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 215--221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--221
+
+ []
+
+
+Overfull \hbox (5.42245pt too wide) in paragraph at lines 215--221
+\OT1/cmr/bx/n/10 AWS Batch \OT1/cmr/m/n/10 al-lows you to pro-cess large work-loads in smaller chunks (or batches).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
+
+ []
+
+[8] [9] [10] (aws_certified_cloud_practioner.aux) ) 
+Here is how much of TeX's memory you used:
+ 421 strings out of 478870
+ 8077 string characters out of 2847414
+ 307060 words of memory out of 3000000
+ 18406 multiletter control sequences out of 15000+600000
+ 408020 words of font info for 42 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 34i,6n,41p,748b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on aws_certified_cloud_practioner.pdf (10 pages, 111705 bytes).
+PDF statistics:
+ 65 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

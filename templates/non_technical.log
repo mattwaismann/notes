@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  29 JUL 2021 14:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  29 JUL 2021 14:30
 entering extended mode
 **c:/Users/mattwais/Desktop/notes/templates/non_technical.tex
 (c:/Users/mattwais/Desktop/notes/templates/non_technical.tex
@@ -19,42 +19,80 @@ File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
+) (C:\Users\mattwais\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+ (C:\Users\mattwais\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count190
+\c@Blindtext=\count191
+\c@blind@countparstart=\count192
+\blind@countxx=\count193
+\blindtext@numBlindtext=\count194
+\blind@countyy=\count195
+\c@blindlist=\count196
+\c@blindlistlevel=\count197
+\c@blindlist@level=\count198
+\blind@listitem=\count199
+\c@blind@listcount=\count266
+\c@blind@levelcount=\count267
+\blind@mathformula=\count268
+\blind@Mathformula=\count269
+\c@blind@randomcount=\count270
+\c@blind@randommax=\count271
+\c@blind@pangramcount=\count272
+\c@blind@pangrammax=\count273
 ) (C:\Users\mattwais\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count190
+\l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box50
 ) (non_technical.aux)
 \openout1 = `non_technical.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
-LaTeX Font Info:    ... okay on input line 2.
- [1
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+[1
 
 {C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (non_technical.aux) ) 
 Here is how much of TeX's memory you used:
- 390 strings out of 478870
- 7385 string characters out of 2847414
- 297999 words of memory out of 3000000
- 18387 multiletter control sequences out of 15000+600000
- 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 616 strings out of 478870
+ 11053 string characters out of 2847414
+ 305750 words of memory out of 3000000
+ 18591 multiletter control sequences out of 15000+600000
+ 408697 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,5n,41p,190b,107s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on non_technical.pdf (1 page, 13293 bytes).
+ 42i,6n,52p,283b,214s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0600.pk> <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on non_technical.pdf (1 page, 74850 bytes).
 PDF statistics:
- 11 PDF objects out of 1000 (max. 8388607)
+ 51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
