@@ -623,6 +623,32 @@ AWS provides tools to track your spend. \\ \\
 \textbf{Cost and Usage Report} contains the most comprehensive set of cost and usage data up to the instance ID. This is useful for viewing granular data about your AWS bill
 \textbf{Cost Explorer} Allows you to analyze your past costs and forecast future costs. 
 \subsection{Governance Services}
+Governance and management services help you maintain control over cost, compliance, and security across all your AWS accounts. \\ \\ 
+\textbf{Organizations} allows you to centrally manage multiple AWS accounts under one umbrella. Group multiple accounts, with a single payer for all accounts. An Organazation is an entity that allows you to consolidate multiple AWS accounts with a single master payer through 'consolidated billing'. Organizaton units are similar AWS accounts that are grouped together. \\ \\
+Benefits of using organizations: consolidated billing, cost savings (volume discounts), and account governance (a quick and automated way to create and invite AWS accounts to your organization). \\ \\
+\textbf{Control Tower} helps you ensure your accounts conform to company-wide policies. This helps set up new accounts using multi-account strategy, works with AWS orgnizations by automatically setting up organizations as the underlying AWS service for all your accounts. It also provides a dashboard to manage your accounts. This service is useful when you want to disallow public write access to all your S3 buckets across all your accounts.  \\ \\
+\textbf{Systems Manager} gives you visibility and control over your AWS resources like automating operational tasks on your resources and take actions on group resources. You can also patch and run commands on multiple EC2 instances or manage several RDS instances. This is useful if you want to deploy operating system patches to all your instances. \\ \\
+\textbf{Trusted Advisor} provides real-time guidance to help you provision your resources following AWS best practices. It checks your account and makes reccomendations and it helps you see service limits and understand best practice. Often time Trusted Advisor checks for unrestricted access on EC2 ports. It checks for public access into S3 buckets. It checks for IAM password policy. It checks for service usage greater than 80\% of service limit. It checks for exposed access keys. It checks for CloudFront delivery optimization. This service can be useful for checking read and write capacity for DynamoDB.
 \subsection{Management Services}
+There are several services that help you migrate to and build faster in the cloud.  \\ \\
+\textbf{Managed Services} helps you efficeintly operate your AWS infrastructure. Augments your internal staff, provides ongoing management of your infrastructure, and reduces overhead. This service can be useful if you want to develop application specific health monitoring using CloudWatch, then Managed Services will help you do this. \\ \\
+\textbf{Professional Services} helps enterprise customers move to a cloud-based operating model. They propose solutions, architect solutions, and help implement solutions. If you need help evaluating an application for migration to a cloud then you can levearge Professional Services. \\ \\
+\textbf{AWS Partner Network (APN)} is a global community of approved partners that offer software solutions and consulting solutions for AWS. Offers technology partner that provide software solutions and provides consultin partners that offer professional services. An APN could help you get a new application up and running quickly. \\ \\
+\textbf{Marketplace} is a digital catalog of prebuilt solutions you can purchase or license. You may also sell your own solutions to others via Markeplace. This is useful for testing software before you buy software you need in Marketplace because many sellers allow free trials. 
 \subsection{Support Plans}
+There are 4 support plans on AWS:
+\begin{enumerate}
+    \item Basic support is included for free for all AWS accounts but gives access to discussion forums and 24/7 support.
+    \item Developer starts at \$29 a month and is reccomended for testing and development. You have access to techincal support and you are allowed a cloud support associate during business hours only.
+    \item Business starts at \$100 a month and is recommened for production workloads. You have access to technical support  and you have unlimited contacts and can access a full set of Trusted Advisor checks. 24/7 phone, email, or chat support with Cloud Support Engineers. 
+    \item Enterprise starts at \$15,000 a month is reccomended for mission-critical production workloads. You have access to technical support. Unlimited contacts. A TAM (Technical Account Manager), Concierge Support Team (for billing and account questions), Infrastructure Events, 24/7 contact with Cloud Support Engineers. Less than 15 minute response times for business-critical system down.
+\end{enumerate}
+There are 3 types of support cases you can open with AWS Support (AWS Support doesn't allow cases for code development or system administration tasks):
+\begin{enumerate}
+    \item Account and Billing related cases
+    \item Service limit increases (some services have quotas/limits and you need to request to go beyond them)
+    \item Techincal Support cases can only be opened by customers on developer, business, or enterpise plans. 
+\end{enumerate}
+
+
 \end{document}

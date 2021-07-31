@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  29 JUL 2021 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  31 JUL 2021 00:53
 entering extended mode
 **c:/Users/mattwais/Desktop/notes/aws_certified_cloud_practioner/aws_certified_cloud_practioner.tex
 (c:/Users/mattwais/Desktop/notes/aws_certified_cloud_practioner/aws_certified_cloud_practioner.tex
@@ -26,40 +26,40 @@ File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
 ) (aws_certified_cloud_practioner.aux)
 \openout1 = `aws_certified_cloud_practioner.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 8.
+(Font)              <12> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 8.
+(Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 8.
+(Font)              <6> on input line 9.
  [1
 
 {C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
@@ -138,19 +138,449 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
-[8] [9] [10] (aws_certified_cloud_practioner.aux) ) 
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 289--295
+
+ []
+
+
+Overfull \hbox (4.87636pt too wide) in paragraph at lines 316--316
+[]\OT1/cmr/bx/n/12 Understanding Net-work-ing Ser-vices: VPC and its Sub-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 334--337
+
+ []
+
+[12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 419--421
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 453--455
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--473
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 474--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--481
+
+ []
+
+[17]
+Overfull \hbox (3.50421pt too wide) in paragraph at lines 481--481
+[]\OT1/cmr/bx/n/12 Deployment and In-fras-truc-ture Man-age-ment Ser-vices 
+ []
+
+
+Overfull \hbox (21.36177pt too wide) in paragraph at lines 482--483
+\OT1/cmr/m/n/10 These ser-vices help you quickly stand up new ap-pli-ca-tions, au-to-mate the maangemetn
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--492
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 492--495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--510
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 513--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--521
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--521
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
+
+ []
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--566
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 574--576
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--576
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--576
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--581
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--581
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--581
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--595
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 596--600
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--600
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--607
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--607
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--607
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--607
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--620
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 621--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--632
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 633--638
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--638
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--638
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--638
+
+ []
+
+[27] [28] (aws_certified_cloud_practioner.aux) ) 
 Here is how much of TeX's memory you used:
  421 strings out of 478870
  8077 string characters out of 2847414
- 307060 words of memory out of 3000000
+ 308072 words of memory out of 3000000
  18406 multiletter control sequences out of 15000+600000
  408020 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,41p,748b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,6n,41p,748b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on aws_certified_cloud_practioner.pdf (10 pages, 111705 bytes).
+Output written on aws_certified_cloud_practioner.pdf (28 pages, 160368 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
