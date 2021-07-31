@@ -1,6 +1,7 @@
 %PREAMBLE
 \documentclass{article}% use option titlepage to get the title on a page of its own.
 \title{AWS Certified Cloud Practioner Exam Notes}
+\date{July 29, 2021}
 \author{Matt Waismann}
 
 %MAIN
@@ -10,8 +11,8 @@
 \subsection{Exam Blueprint}
 The exam validates ability to:
 \begin{itemize}
-    \item Value of AWS Cloud
-    \item Understand and expalin the AWS shared responsility model
+    \item Understand the value of AWS Cloud
+    \item Understand and expalin the AWS shared responsibility model
     \item Understand AWS Cloud security best practices
     \item Understand AWS Cloud costs, economics, and billing practices
     \item Identify most core services
@@ -26,7 +27,7 @@ Domain Areas:
 \begin{itemize}
     \item Cloud Concepts (26\%): AWS cloud value propostion, cloud economics, and cloud architecture design principles
     \item Technology (33\%): Methods of deployments, global infrastructure, AWS services, and technology support
-    \item Security and Compliance (25\%): shared responsility model, security and compliance concepts, and access management capabilities
+    \item Security and Compliance (25\%): shared responsibility model, security and compliance concepts, and access management capabilities
     \item Billing and Pricing (16\%): Comparing pricing models, account structures, billing, pricing, and billing support resources
 \end{itemize}
 \textbf{Minimum passing score: 700 (70\%)}
@@ -43,38 +44,38 @@ AWS has thousands of servers grouped together in places called \textbf{Data Cent
     \item Security: IAM and Macie
     \item Databases: RDS and DynamoDB
 \end{itemize}
-There exist a Whitepaper called Overview of Amazon Web Services that is 72 pages long and gives details on all the services.
-To maximize the use of a server, AWS allows you to share a AWS server with other customers through a process called \textbf{Virtualization}. Virtualization lets you divide hardware resources opn a single physical server into smaller untis called \textbf{Virtual Machines}, each with its own storage, OS, and network connection. The usage of these services is billed \textbf {On Demand} (no long-term contracts or upfront payments) and \textbf{Pay as you Go} (billed by the hour or second of usage).
+There exists a whitepaper called Overview of Amazon Web Services that is 72 pages long and gives details on all the services.
+To maximize the use of a server, AWS allows you to share a AWS server with other customers through a process called \textbf{Virtualization}. Virtualization lets you divide hardware resources on a single physical server into smaller units called \textbf{Virtual Machines}, each with its own storage, OS, and network connection. The usage of these services is billed \textbf {On Demand} (no long-term contracts or upfront payments) and \textbf{Pay as you Go} (billed by the hour or second of usage).
 
 \subsection{Advantages of Cloud Computing}
 There are 6 advantages to cloud computing: 
 \begin{enumerate}
-    \item Go global in minutes. AWS allows applications to be deployed to multiple regions at the click of the button
-    \item Stop spending money running and maintaining data Centers
+    \item Go global in minutes - AWS allows applications to be deployed to multiple regions at the click of a button
+    \item Stop spending money running and maintaining data centers
     \item Benefit from massive economies of scale
-    \item Increase speed and agility. This gives faster time to market.
-    \item Stop guessing about capacity. Your capacity is matched exactly to your demand.
-    \item Trade capital expense for variable expense. Instead of the upfront costs of data centers you pay for what you use when you use it.
+    \item Increase speed and agility - This gives faster time to market.
+    \item Stop guessing about capacity - Your capacity is matched exactly to your demand
+    \item Trade capital expense for variable expense - Instead of the upfront costs of data centers you pay for what you use when you use it
 \end{enumerate}
 Here are the benefits in technical terms:
 \begin{enumerate}
-    \item High Availability. A system which operates continuously without failure for a long time.
-    \item Elasticity. You don't need to plan ahead of time with how much capacity you need. You can provision only what you need, and then grow and shrink based on demand.
-    \item Agility. AWS services help you innovate faster and give a faster speed to market.
-    \item Durability. Durability is all about long term data protection. This means your data will remain intact without corruption
+    \item High Availability - A system which operates continuously without failure for a long time
+    \item Elasticity - You don't need to plan ahead of time with how much capacity you need. You can provision only what you need, and then grow and shrink based on demand
+    \item Agility - AWS services help you innovate faster and give a faster speed to market
+    \item Durability - Durability is all about long term data protection. This means your data will remain intact without corruption
 \end{enumerate}
 \subsection{Cloud Computing and Deployment Models}
 There are 3 common cloud computing models:
 \begin{enumerate}
-    \item Infrastrucutre. Fundamental building blocks that can be rented e.g. EC2. Analogy -> web hosting
-    \item Software as a Service (SaaS). Complete Applications e.g. SageMaker which does Machine Learning for you. Analogy -> email provider
-    \item Platform as a Service (PaaS). Used by developers. Analogy -> A service gives you tools to build a storefront website. 
+    \item Infrastrucutre - Fundamental building blocks that can be rented e.g. EC2. Analogy: web hosting
+    \item Software as a Service (SaaS) - Complete Applications e.g. SageMaker which does Machine Learning for you. Analogy: email provider
+    \item Platform as a Service (PaaS) - Used by developers. Analogy: A service gives you tools to build a storefront website 
 \end{enumerate}
 There are 3 common cloud deployment models:
 \begin{enumerate}
-    \item Private Cloud (aka "on-premises"). Exists in your internal data center. DOesn't offer the advantages of cloud computing.
-    \item Public Cloud (e.g. AWS). Offered by AWS. You get all the benefits listed earlier
-    \item Hybrid Cloud. A mix of private and public cloud. Highly sensitive data is locally stored but the app that runs on that server is run on AWS services. AWS \textbf{Direct Connect} links internal data centers with AWS services
+    \item Private Cloud (aka "on-premises") - Exists in your internal data center. Doesn't offer the advantages of cloud computing
+    \item Public Cloud (e.g. AWS) - Offered by AWS. You get all the benefits listed earlier
+    \item Hybrid Cloud - A mix of private and public cloud. Highly sensitive data is locally stored but the app that runs on that server is run on AWS services. AWS \textbf{Direct Connect} links internal data centers with AWS services
 \end{enumerate}
 \subsection{Leveraging the AWS Global Infrastructure}
 \textbf{Regions} are physical locations. AWS logically groups its Regions into \textbf{geographic locations} (e.g. US West, US East, Europe, South America, Asia Pacific).
@@ -94,27 +95,26 @@ characteristics of AZs:
     \item All AZs in the same region are connected through low-latency links 
     \item Fault tolerant. If one AZ fails the others won't
     \item Allows for high availability. If one AZ fails your application can still run on another one
-    \item 
 \end{itemize}
 
-\textbf{Edge Locations}. There are way more Edge Locations than AZs and Regions. These Edge Locations are like mini data centers that cache content instead of launching resource like EC2. They servce to reduce latency and speed up delivery of your applications. \textbf{latency} is the time that 
+\textbf{Edge Locations} - There are way more Edge Locations than AZs and Regions. These Edge Locations are like mini data centers that cache content instead of launching resources like EC2. They servce to reduce latency and speed up delivery of your applications. \textbf{Latency} is the time that 
 passes between a user request and the resulting response.  
 
 \subsection{Exploring Your AWS Account}
-The \textbf{AWS Management Console} allows you to access your AWS account and manage applications running in your account from a web browser. You will see a region at the top right and the services listed in the management console will be the services available in that region. The \textbf{Root User} is created when you intially sign up your account. This user has access to everything, therefore it is best practice to almost never use the root user and instead create a 
+The \textbf{AWS Management Console} allows you to access your AWS account and manage applications running in your account from a web browser. You will see a Region at the top right and the services listed in the management console will be the services available in that region. The \textbf{Root User} is created when you intially sign up your account. This user has access to everything, therefore it is best practice to almost never use the root user and instead create a 
 seperate user for your day-to-day activities. The Root User will need to be used to delete a AWS account. Protect the root user with \textbf{Multi-Factor Authentication (MFA)}. \\ \\
 
 Within the \textbf{Identity and Acess Managment (IAM)} service you can see all your users (including the root user) and all security settings. \\ \\ 
 
 \textbf{Virtual Private Cloud} is a service that you should set up right away. This is a way to create a secure private network (your own slice of the cloud) and within the network you deploy the resources you want to protect. If you deploy a resource and don't select a VPC there's a VPC already set up for you and AWS will automatically place the service within that VPC. \\ \\ 
 
-\textbf{AWS Command Line Interface AWS (CLI) } allows you to access your AWS account through a \textbf{terminal} or \textbf{command} window. Developers use the CLI more than the console. \\ \\
+\textbf{AWS Command Line Interface (CLI) } allows you to access your AWS account through a \textbf{terminal} or \textbf{command} window. Developers use the CLI more than the console. \\ \\
 
 \textbf{Programmatic Access} provides access to your AWS resources through an application or a tool like the CLI. Example of programmatic ways to access your account:
 \begin{enumerate}
     \item CLI - a terminal session
     \item Application Code - AWS services can be accessed from application code using SDKs and programmatic calls
-    \item \textbf{Software Development Kits (SDKs)} allow you to access AWS services from popular langauges from popular languages like Python, Java, C\#, and more.  
+    \item \textbf{Software Development Kits (SDKs)} allow you to access AWS services from popular langauges from popular languages like Python, Java, C\#, and more
 \end{enumerate}
 
 \section{Technology}
@@ -244,5 +244,385 @@ Use cases:
     \item Mobile applications - Mobile application users can upload files to an Amazon S3 bucket
 \end{enumerate}
 
+\subsection{Additional Storage Services}
+EC2 supports several storage options for your instances:
+\begin{enumerate}
+    \item \textbf{Elastic Block Store (EBS)}
+    \begin{itemize}
+        \item EBS is a storage deice (caslled a \textbf{volume}) that EBS be attached to (or removed from) your instance (like a flash drive).
+        \item Data persists when the instance is not running
+        \item Tied to one AZ
+        \item Can only be attached to one instance in the same AZ
+        \item Use Cases: Quickly accessible data, running a database on an instance, long-term data storage
+    \end{itemize}
+    \item \textbf{Instance Store}
+    \begin{itemize}
+        \item An instance store is a local storage that is physically attached to the host computer and cannot be removed
+        \item Storage on disks physically attached to an instance
+        \item Storage is temporary since data loss occurs when EC2 instance is stopped
+        \item recommended for: temporary storage needs, data replicated across multiple instances
+    \end{itemize}
+    \item \textbf{Elastic File System}
+    \begin{itemize}
+        \item EFS is a serverless network file system for sharing files
+        \item Only supports the Linux file system
+        \item More expensive than EBS
+        \item Accessible across different AZs in the same Region
+        \item Use case: Main directories for business-critical apps, Life-and-shift existing enterprise applications
+    \end{itemize}
+\end{enumerate}
+\textbf{Storage Gateway} is a hybrid storage service.
+\begin{itemize}
+    \item Connect on-premises and cloud data
+    \item Supports a hybrid deployment model
+    \item Use cases: Moving backups to the cloud, reducing costs for hybrid cloud storage, low-latency data storage
+\end{itemize}
 
+\subsection{Understanding Content Delivery Systems}
+A \textbf{content delivery network (CDN)} is a service that ensures fast content download. More specifically, a mechanism to deliver content quicly and efficiently based on geographic location. A CDN provides low latency. \\ \\
+\textbf{Amazon CloudFront} is a CDN that delivers data and applications globally with low latency
+\begin{itemize}
+    \item Makes content available globally or restricts it based on location
+    \item Speeds up delivery of static (a website were all the files needed to run the website run on the client (i.e. web browser) rather than the server) and dynamic web content
+    \item Uses edge locations to cache content (caches are just copies of files)
+\end{itemize}
+If the content being delivered is not already in the edge location, CloudFront 
+How this plays out: \\ \\
+First a user submits a request to view content and that request goes to a CloudFront distribution (which is really just a collection of edge locations called a \textbf{Distribution Cache}) and if the content is there
+it goes immediately back to the user. If the content is NOT in an Edge Location then there's a request to the \textbf{Origin}. The Origin is the orignal
+location of the content e.g.(S3 Bucket, EC2 Instance, or Elastic Load Balancer) and sends it back to the user. \\
+Other benefits of CloudFront: 
+\begin{itemize}
+    \item CloudFront is often used with S3 to deploy content globally
+    \item CloudFront can stop certain web attacks like DDoS
+    \item Geo-restriction prevents users in certain countries from accessing your content with an IP Address blocker.
+\end{itemize}
+
+\textbf{Amazon Global Accelerator} is a service that improves the availability of your apps
+\begin{itemize}
+    \item Improves latency and availability of single-Region applications
+    \item Sends traffic through the AWS global network infrastructure
+    \item 60\% performance boost
+    \item Automatically re-routes traffic to healthy available regional endpoints
+\end{itemize}
+
+\textbf{S3 Transfer Acceleration} Imporves content uploads and downloads to and from S3 buckets.
+\begin{itemize}
+    \item Fast transfer of files over long distances
+    \item Uses CloudFront's globally distributed edge locations
+    \item Customers around the world can upload to a central bucket
+\end{itemize}
+
+\subsection{Understanding Networking Services: VPC and its Subcomponents}
+\textbf{Networking} connects comuters together and allows for the sharing of data and applications, around the globe, in a secure manner using virtual routers, firewalls, and network management services. \\ \\
+\textbf{Amazon Virtual Private Cloud (VPC)} is a foundational service that allows you to create a secure private network in the AWS cloud hwere you launch your resources.
+\begin{itemize}
+    \item Private virtual network
+    \item Launch resources like EC2 instances inside the VPC
+    \item Isolate and protect resources
+    \item Spans multiple AZs in a single region
+\end{itemize} 
+A VPC is like a fence around your resources, protecting them. In this analogy the VPC is the fence surrounding your resources deployed across several Availablity Zones in a region. A \textbf{subnet} allows you to split the network inside a VPC and you launch the resources within the subnet. For example, you can have private resources like a database inside a private subnet. You can also have a public subnet where you put resources that you want to be public (accessible from the internet).
+There are several components which help make a subnet public: 
+\begin{itemize}
+    \item \textbf{Network Access Control List} - ensures the proper traffic is allowed into the subnet
+    \item \textbf{Router and Route Table} - defined where network traffic is directed
+    \item \textbf{Internet Gateway} - Allows public traffic from the internet to the VPC
+\end{itemize}
+VPC peering allows you to connect 2 VPCs together. \textbf{Peering} facilitates the transfer of data in a secure manner.
+\subsection{Additional Networking Services}
+What is DNS? Every computer on the internet has an address. The address of a computer is called an IP (Internet Protocol) address. A website/application on the web is on a computer with an IP address.
+Instead of accessing the website by the IP address, we access them through IP address. A \textbf{DNS} stands for Domain Name System and directs internet traffic by connecting domain names with web servers. \\ \\
+\textbf{Amazon Route 53} is a DNS service that routes users to applications.
+\begin{itemize}
+    \item Allows for domain name registration
+    \item Performs health checks on AWS resources
+    \item Supports hybrid cloud architectures
+\end{itemize} 
+
+\textbf{AWS Direct Connect} is a dedicated physical network connection from your on-premises data center to AWS.
+\begin{itemize}
+    \item Dedicated physical network connection
+    \item Connects your on-premises data to AWS
+    \item Data travels over a private network
+    \item Supports a hybrid deployment model
+\end{itemize}
+A use case for Direct Connect is linking private data in the private cloud on site and the application runs on the public cloud (AWS services). Other use cases:
+\begin{itemize}
+    \item Large datasets
+    \item Business-critical data
+    \item Hybrid model
+\end{itemize}
+
+\textbf{AWS Site-to-Site VPN} a Site-to-Site VPN creates a secure connection between your internal networks and your AWS VPCs (different fro VPC because data travels over public internet not a private network)
+\begin{itemize}
+    \item Similar to Direct Connect but data travels over the public internet
+    \item Data is automatically encrypted
+    \item Connects your on-premises data center to AWS
+    \item Support a hybrid environment
+    \item Cheaper than Direct Connect
+\end{itemize}
+
+Site-to-Site VPN in the Real World is used to make moving applications to the cloud easier. A \textbf{Virtual Private Gateway} is a VPN connector on the AWS side that supports the connection ("tunnel") from on-premises to cloud. The customer also has their own connection called the \textbf{Customer Gateway}. Between the Virtual Private Gateway and Customer Gateway is where the Site-to-Site VPN facilitates the connection.
+
+\subsection{Databases}
+In the AWS ecosystem, there are many different types of databases that support different use cases. Databases allow us to collect, store, retrieve, and manipulate data. A database is an organized collection of various forms of data. Databases are used by many applications. Databases are typically controlled by a \textbf{Database Management Systems (DBMS)}. AWS databases for different use cases:
+\begin{itemize}
+    \item Relational - \textbf{RDS, Aurora}
+    \item NoSQL - \textbf{DynamoDB}
+    \item Graph Databases - \textbf{Neptune}
+    \item In-memory - \textbf{ElastiCache}
+    \item Document Data Stores - \textbf{DocumentDB}
+\end{itemize} 
+\textbf{Amazon Relational Database Service (RDS)} is a service that makes it easy to launch and manage relational databases.
+\begin{itemize}
+    \item Supports popular database engines like Aurora, PostgreSQL, MySQL, Oracle, and SQL Server
+    \item Offers high availability and fault tolerance using Multi-AZ deployment option
+    \item AWS manages the patching, backups, OS maintence
+    \item Launch read replicas across Regions in order to provide enhanced performance and availablility
+\end{itemize}
+\textbf{Aurora} is a relational database compatible with MySQL and PostgreSQL that was created by AWS
+\begin{itemize}
+    \item 5x faster than normal MySQL and 3x faster than PostgreSQL
+    \item Scales automatically
+    \item Managed by RDS
+\end{itemize}
+\textbf{DynamoDB} is a fully managed NoSQL key-value document database. 
+\begin{itemize}
+    \item Fully managed and serverless
+    \item Non-relational
+    \item Scales automatically to large workloads with fast performance
+\end{itemize}
+\textbf{DocumentDB} is a fully managed document database that supports MongoDB
+\begin{itemize}
+    \item Fully managed and serverless
+    \item Non-relational
+\end{itemize}
+\textbf{ElastiCache} is a fully managed in-memory datastore compatible with Redis or Memcached. 
+\begin{itemize}
+    \item Data can be lost because its stored in memory
+\end{itemize}
+\textbf{Neptune} is a fully managed graph database that supports highly connected datasets (like social media networks)
+\begin{itemize}
+    \item Fast and serverless
+\end{itemize}
+Case studies:
+\begin{enumerate}
+    \item If you want to migrate Oracle to the cloud? RDS
+    \item If you want to migrate on-premises PostgreSQL database to the cloud? RDS or Aurora
+    \item Alleviate database load for data that accessed often? ElastiCache
+    \item Social Media network user data site? Neptune
+    \item NoSQL database fast enough to handle millions of requests per second? DynamoDB
+    \item Operate MongoDB workloads at scale? DocumentDB
+\end{enumerate}
+\subsection{Migration and Transfer Services}
+Comapnies are moving to the cloud and they need services to aid the transfer of on-premises to AWS. \\ \\
+\textbf{Database Migration Service (DMS)} DMS helps you migrate databses to or within AWS. 
+\begin{itemize}
+    \item Migrate on-premises to AWS
+    \item continuous data replication
+    \item Supports homogenous and heterogeneous migrations
+    \item Virtually no downtime
+\end{itemize}
+DMS use cases:
+\begin{itemize}
+    \item Oracle to Aurora MySQL
+    \item Oracle on premises to Oracle on EC2
+    \item RDS Oracle to Aurora MySQL
+\end{itemize}
+\textbf{Server Migration Service (SMS)}
+SMS allows you to migrate on-premises servers to AWS
+\begin{itemize}
+    \item Server saved as a new Amazon Machine Image (AMI)
+    \item Use AMI to deploy to EC2 instances
+\end{itemize}
+The \textbf{AWS Snow Family} allow you transfer on premises to the cloud using a physical device. The Snow Family consists of:
+\begin{itemize}
+    \item Snowcone - Smallest member of the data transport devices. Holds 8 terabytes of usable storage. Offline shipping. Online with \textbf{DataSync}
+    \item Snowball and Snowball Edge - Pentabyte-scale data transport solution. Cheaper than internet transfer. Edge supports EC2 and Lambda
+    \item Snowmobile - Multi-petabyte or exabyte scale data data. Moves your data in a 45 foot long shipping container. Securely transported.
+\end{itemize}
+\textbf{DataSync} allows for online data transfer from on-premise to AWS storage serices like S3 or EFS.
+\begin{itemize}
+    \item Migrates data from on-premises to AWS
+    \item Copy data over Direct Connect or the internet
+    \item Copy data between AWS storag services
+    \item Replicate data across a Region
+\end{itemize}
+\subsection{Analytics Services}
+A \textbf{Data Warehouse} is a data storage solution that aggregates massive amounts of historical data from disparate sources. Data Warehouses suppot querying, reporting, analytics, and business intelligence. They are not used for transcation processing. \\ \\
+\textbf{Redshift} is a scalable data warehouse solution. It handles exabyte-scale data. Use cases:
+\begin{itemize}
+    \item Data consolidation - when you need to consolidate multiple data sources for reporting
+    \item Relational - When you want to run a database that doesn't require real-time transaction processing (insert, update, delete)
+\end{itemize}
+\textbf{Analytics} is the act of querying or processing your data. There are several services that allow you to make insights with these data. \\ \\
+\textbf{Athena} is a query service for Amazon S3 that allows you to use standard SQL. \\ \\ 
+\textbf{Glue} prepares your data for analytics. It is an \textbf{ETL (Extract, Tranform, and Load)} service. Helps you better understand your data.
+\textbf{Kinesis} allows you to analyze data and video streams in real time. Supports video, audio, application logs, website clickstreams, and IoT data. Useful for real time fraud detection. 
+\textbf{Elastic MapReduce (EMR)} helps you process large amounts of data. Analyze data using Hadoop which leverages distributed computing. Also works with Apache Spark.
+\textbf{Data Pipeline} helps you move data between compute and storage services running either on AWS or on-premises. You move data based on conditions or at specific intervals. It can send notifications of sucess or failure. 
+\subsection{Machine Learning}
+\textbf{Arificial Intelligence (AI)} teaches computers to do things that normally require human intelligence. \\ \\ 
+\textbf{Rekognition} allows you to automate your image and video analysis. Face and text detection in images and video. \\ \\
+\textbf{Comprehend} is a natural language processing (NLP) service that finds relationships in text. It finds insights and relationships within text. \\ \\ 
+\textbf{Polly} turns text into speech. It mimic natural sounding human speech. Several voices across many languages. \\ \\
+\textbf{SageMaker} helps you build, train, and deploy machine learning models quickly. It allows you to use Deep Learning AMIs.
+\textbf{Translate} provides real-tiem and batch language translation, supporting many languages.
+\textbf{Lex} helps you build conversational interfaces like chatboxes. It can recognize speech and understands language. Lex actually powers Amazon Alexa.
+\subsection{Developer Tools}
+Software developers use tools to accelearte the software development and release cycle.  \\ \\
+\textbf{Cloud9} is an integrated development environment (IDE) that supports many programming languages. Cloud9 preconfigures the development environt with the proconfigured SDKs and libraries. \\ \\
+\textbf{CodeCommit} is a source control system for private Git repositories. This can be used to manage source code and the different versions of these files. CodeCommit is like Github. \\ \\
+\textbf{CodeBuild} allows you build and test your application source code. Complies source code and runs tests. It enables continuous integration and delivery. Produces build artificats ready to be deployed. \\ \\
+\textbf{CodeDeploy} manages the deployment of code to compute services in the cloud or on-premise. Deploy code to EC2, Fargate, Lambda, and on-premises. It helps maintain application up-time. Useful for rolling out a new version of your application because it has something called rolling deployments. \\ \\
+\textbf{CodePipeline} automates the software release process. Quickly deliver new features and updates to production. Integrates with CodeBuild to run builds and unit tests. Integrates with CodeCommit to retrieve source code. Integrates with CodeDeploy to deploy your changes. CodePipeline is useful for adding DevOps automation to the building, testing, and deploying of your application. \\ \\
+\textbf{X-Ray} helps you debug and analyze production applications. View requests end to end. X-Ray is useful to help map requests made to your RDS database from within your application. You can track information about SQL queries and more.
+\subsection{Deployment and Infrastructure Management Services}
+These services help you quickly stand up new applications, automate the maangemetn of infrastructure, and provide real-time visiability into the health of your systems.
+
+\textbf{Infrastructure as Code (IaC)} allows you to write a script to provision AWS resources. The benefit is that you provision resources in a reproducible manner that saves time.  \\ \\
+\textbf{CloudFormation} allows you to provision AWS resources using Infrastrucutre as Code (IaC). You can create templates with the resources you want to provision. This can be used to automate the creation of EC2 instances in your AWS account. The stack of resources created will depend on the template.
+\textbf{Elastic Beanstalk} is technically a compute service when you're ready to deploy your applications. Its an orchestration service that provisions resources. It automatically handles deployment from capacity provisioning, load balancing, and autoscaling. Monitors application health via a health dashboard. It is useful to quickly deploy a web application to AWS. \\ \\
+\textbf{OpsWorks} allows you to deploy code and manage applications. Manage on-premises servers or EC2 instances in AWS Cloud. Works with automation platforms like Chef and Puppet. This service is useful for automating software configurations and infrastrucutre management for your application.  \\
+\subsection{Messaging and Integration Services: SQS}
+\textbf{Coupling} defines the interdependencies or connections between components of a system. Loose compuling helps reduce the risk of cascading failures between componenets. \textbf{Monolithic Applications} are large applications with lots of interdependencies, these are described by \textbf{Tight coupling}. A monolithic application broken down into microservices that are connected but not depenent on each other is an example of \textbf{loose coupling}. 
+\textbf{Queues} are used to implement loosely coupled systems. A Queue is a data structure that holds requests or messages (like waiting in line) (FIFO - First in, First out). \\ \\
+\textbf{Simple Queue Service (SQS)} is a message queuing service that allows you to build loosely coupled systems. Allows component-to-component communication using messages. Multiple components (or producers) can add messages to the queue. Messages are processed in an asynchronous manner. An example: SQS lets you build a money transfer app the performs well under heavy load. The messaging queue will help you send a money transfer request. A request gets added to the queue once it is submitted. Requests are processed in FIFO order.
+\subsection{Messaging and Integration Services: SNS and SES} Sometimes users of applications need to know when certain events happen. Notifications such as text messages or emails can be sent through services in the cloud.
+\textbf{Simple Notification Service (SNS)} allows you to send emails and text messages from your applications. These messages are formatted as text. SES (next) allows for richly formatted html emails. Example: SNS works with CloudWatch when an EC2 instance's utilization is over 80\%. \\ \\
+\textbf{Simple Email Service (SES)} SES is an email service that allows you to send richly formatted HTML emails from your applications. Ideal for professional email or marketing campaigns. 
+\subsection{Auditing, Monitoring, and Logging Services}
+These services give you insight and visibility into how well your systems are performing and help you proactively find and resolve errors. This can help answer questions like:
+\begin{itemize}
+    \item Who signed in and made changes via the AWS management console?
+    \item What is the current load on the EC2 instance?
+    \item What is the root cause of this application error?
+    \item Which execution path resulted in this error?
+\end{itemize}
+\textbf{CloudWatch} is a collection of services that helps you monitor and observe your cloud resources. Collects metrics, logs, and events. Detect anomilies in your enviornment. You can also set alarms. \\ \\
+\textbf{CloudWatch Alarms} is a service that helps set high resolution alarms (e.g. a billing alarm to help estimate AWS charges)\\ \\
+\textbf{CloudWatch Logs} allow you to monitor application logs for performance data \\ \\
+\textbf{CloudWatch Metrics} helps you visualize time series data (e.g. CPU usage of an EC2 instance over time) \\ \\
+\textbf{CloudWatch Events} Trigger an event on a condition  \\ \\
+\textbf{CloudTrail} tracks user activity and API calls within your account. You can log and retain account activity. Track activity through the console, SDKs, and CLI. Identify which user made changes. Detect unusal activty your account. You can track the time a particular event occured in your account for any event in the last 90 days.
+You can track the username, event time and name, IP address, access key used, Region, and Error code. 
+
+\section{Security and Compliance}
+\subsection{The Shared Responsibility Model}
+In the public cloud, there is shared security responsibility between you and AWS.
+AWS is responsible for security OF the cloud.
+You are responsible for security IN the cloud. \\ \\
+
+AWS is responsible for the global infrastructure like Regions, edge locations, and Availability Zones. 
+In addition, AWS is responsible for the building security which house the data centers. AWS maintains networking
+components: generators, air conditioning units, fire suppression, and more. AWS is responsible for any managed service 
+like RDS, S3, ECS, or Lambda, patching of host operating systems and data access endpoints. \\ \\
+
+You are responsible for how the services are implement and managing your application data. In addition, you are responsible for security configurations, patching (updates and security patches) on guest EC2 instances. You are responsible
+for application security and identity and access management. You are responsible for network traffic protection and group firewall configuration. Lastly, you are responsible for your application code and installed software. \\ \\
+
+The EC2 shared responsibility model. You are responsible for: installed applications, patching the guest operating system, security controls. AWS is responsible for: EC2 service, patching the host operating system, and security of the host server. \\ \\
+
+The Lambda shared responsibility model. You are responsible for: Security of the code, storage of sensitive data, and IAM for permissions. AWS is responsible for: Lambda Service, Lambda Lanugage, Lambda endpoints, Operating system, underlying infrastructre, and software dependencies. \\ \\
+
+Which security responsibilities are shared?
+\begin{itemize}
+    \item Patch Management - AWS patches infrastructure, You patch guest OS and applications
+    \item Configuration Management - AWS configures infrastructure devices, You configure databases and applications
+\end{itemize}
+
+How do I report abuse of AWS resources?
+Contact the AWS Trust \& Safety team using the Report Amazon AWS abuse form
+
+\subsection{The Well-Architected Framework} 
+The 5 pillars of the Well-Architected Framework describe design principles and best practices for running workloads in the cloud.
+\begin{enumerate}
+    \item Operational Excellence. Creating applications that effectively support production workloads. Plan for and anticape failure, Deploy smaller, reversible changes. Script operations as code. Learn from failure and refine.
+    \item Security. Putting mechanisms in place that support the systems and data. Automate security tasks. Encrypt data in transit and at rest. Assign only the least priviledges required. Track who did what and when. Ensure secuirty at all application layers.
+    \item Reliability. Designing systems that work consistently and recover quickly. Recover from failure automatically. Scale horizontally for resilience. Reduce idle resources. Manage change through automation. Test recovery procedures. 
+    \item Performance Efficiency. The effective use of computing resources to meet system and business requirements while removing bottlenecks. Use serverless architectures first. Use multi-region deployments. Delegate tasks to a cloud a vendor. Experiment with virtual resources.
+    \item Cost Optimization. Delivering optimum and resilient solutions at the least cost to the user. Utilize consumption-based pricing. Implement Cloud Financial Management. Meaure overall efficiency. Pay only for resources your applications require. 
+\end{enumerate}
+Corresponding services to support the 5 pillars
+\begin{itemize}
+    \item Operational Excellence. You can use AWS CodeCommit for version controlling of source code and CloudFormation templates
+    \item Security. You can configure central logging of all actions performed in your account using CloudTrail
+    \item Reliability. You can use Multi-AZ deployments for enhanced availability and reliability of your RDS Databases
+    \item Performance Efficiency. Lambda can run your code with zero administration
+    \item Cost Optimization. You can use S3 Intelligent-Tiering to move our data between access tiers based on your usage patterns
+\end{itemize}
+    
+\subsection{IAM Users}
+\textbf{Identity and Access Management (IAM)} allows you to control access to your AWS services and resources. Helps you secure your cloud resources. You define who has access and what they can do. Free global service. \\ \\
+\textbf{Identities} define who can access your resources. Examples are Root User, individual users, groups, and roles. \\ \\
+\textbf{Access} defines what resources the users can access. This is controlled through policies, AWS managed policies, customer managed policies, and permission boundaries. \\ \\
+\textbf{Authentication (Who)} is where you present your identity and provide verification (username and passwork) \\ \\
+\textbf{Authorization (What)} determines which services and resources the authenticated identity has access to. \\ \\
+\textbf{Users} are the entities you create in IAM to represent the person or application needing to access your AWS resources. There are some things only the Root User can do: close account, change email address, and modify your support plan. Individual users are created in IAM and are used for everday tasks like starting up an EC2 instances. Pro tip: applications can be users. \\ \\
+\textbf{Principle of least privilege} invovles giving a user the minimum access required to get their job done. \\ \\
+In the real world, you need to create access keys for an IAM user that needs access to the AWS CLI. Those keys can be generated using IAM. Private key accesses the SSH client and the public key accesses the instance.  \\ \\
+A \textbf{group} is a collection of IAM users that helps you apply common access controls to all group members (e.g. Administrators, Developers, and Analysts). Side Note: Don't confuse security groups in EC2 (which are firewalls) with IAM groups (collections of users). Access to the groups is assigned using policies and roles. In the real world, groups are used to apply the same access controls for a large set of users. 
+\subsection{IAM Permissions}
+\textbf{Roles} define access permissions and are temporarily assumed by an IAM user or service (e.g. a DevOps-Engineer Role or Lambda-Execution Role). Think of a role as wearing a hat where you assume the permissions given to that role.
+\begin{itemize}
+    \item You assuem arole to perform a task in a single session
+    \item Assumed by any user or service (e.g. you can let Lambda access a RDS database or S3) that needs it
+    \item Access is assigned using policies
+    \item You grant users in one AWS account access to resources in another AWS account
+\end{itemize}
+In the real world you can attach a role to an EC2 instance for access to S3. Roles allow you to avoid long term credential sharing (access keys) and prevents your instances from unauthorized access. \\ \\
+You manage permissions for IAM users, groups, and roles by creating a \textbf{policy} document in JSON format and attaching it. \\ \\
+
+A common use case is attaching the AWS managed (created) policy which gives access to a specific group (typically of developers) for Cloud9 and EC2. \\ \\
+Another use case is attaching a S3FullAccess Managed Policy to a role, that way whenever a user takes on that role they have full access to S3 until that role expires. \\ \\ 
+You can limit access to an Amazon S3 bucket to specific users by using a bucket access policy which can be directly attached to the S3 bucket. \\ \\
+IAM best practices:
+\begin{itemize}
+    \item Enable MFA for priviledged users
+    \item Implement strong password policies
+    \item Create individual users instead of using root
+    \item Use roles for Amazon EC2 instances
+\end{itemize}
+The \textbf{credential report} gives you a list of all users and the status of their various credentials.
+\subsection{Application Security Services}
+AWS has several software-based security tools available to help you monitor and protect your resources. \\ \\
+\textbf{Firewalls} prevent authorized access to your networks by inspecting incoming and outgoing traffic against security rules you've defined.
+\textbf{Web Application Firewall (WAF)} helps protect your web applications against common web attacks. Protects against SQL injection, cross-site scripting.  \\ \\
+\textbf{Distributed Denial of Service (DDoS)} A DDoS attacka causes a traffic jam on a website or application to crash it. A hacker can send many Bots which make many requests to your web application. 
+\textbf{Shield} is a managed DDoS protection service. Shield Standard provides free protection against common and frequently occuring attacks. Shield Advanced provides access to AWS experts 24/7 for a fee. Shield works with CloudFront, Route53, Elastic Load Balancing, and AWS Global Accelerator.\\ \\
+\textbf{Macie} helps you discover and protect sensitive data. It uses machine learning and evaluates your S3 environment to uncover personally identifiable information. \\ \\
+\subsection{Additional Security Services}
+\textbf{Config} allows you access, audit, and evaluate the configurations of your resources. It delivers the configuration history file to S3 and notifies via SNS of every configuration change. This can be used to identfy system-level configuration changes made to your EC2 changes. \\ \\
+\textbf{GuardDuty} is an intelligent threat detection system that uncovers unathorized behavior. It uses machine learning and has built in detection features for EC2, S3, and IAM. It reviews ClouTrail, VPC flow logs, and DNS logs. This can be used to detect unsual API calls in your account. This is anomaly detection for common techniques used by hackers.
+\textbf{Inspector} works with EC2 instances to uncover and report vulnerabilites. The agent is installed on an EC2 instance, and reports vulnerabilities found. This can be used to identitfy unintened network access to an EC2 instance. \\ \\
+\textbf{Artifact} offers on-demand access to AWS security and compliance reports. It is a central repository for compliance reports from third-party auditors. This can be used to access AWS' certification for ISO compliance because Artifact is a central repo for all compliance reports.
+\subsection{Data Encryption and Secrets Management Services}
+Data encryption is important because it is a way to secure your data. It encodes data so it cannot be read by unauthorized users. \\ \\
+\textbf{Data in flight} are data that are moving from one location to another. 
+\textbf{Data at rest} are data that is inactive or stored for later use. \\ \\
+\textbf{Key Management Service (KMS)} allows you to generate and store encryption keys. It can generate keys and it can store and control keys. These keys are to encrypt and decrypt data. You can create an encrypted EBS volume by specifying a KBS customer master key. \\ \\
+\textbf{CloudHSM} is a hardware security module HSM) used to generate encryption keys. It is dedicated hardware for security but AWS won't have access to the keys. This is useful for meeting compliance requirements for data security by using dedicated hardware in the cloud. \\ \\
+\textbf{Secrets Manager} allows you to manage and retrieve secrets (passwords or keys). You can encrpyt secrets at rest or rotate, manage, and retireve secrets. It integrates with RDS, Redshift and DocumentDB. If you need to retireve database credentials needed for you application code, that way credentials aren't hard coded into application code.
+\section{Pricing, Billing, and Governance}
+\subsection{Pricing}
+There are 3 fundamental drivers of cost: compute, storage, outbound data transfer (inbound data transfer generally is free).
+There's a detailed whitepaper on how pricing works. \\ \\
+There are 3 different types of free offers available: 12 months free, always free, trials \\ \\
+There's 5 ways to pay for EC2 instances. On-Demand, Savings Plan, Reserved Instances, Spot Instances, and Dedicated Hosts \\ \\
+There's 3 factors that play into how Lambda is charged: number of requests, code execution time, first 1,000,000 requets are always free  \\ \\
+With S3 you way for the storage you use: Storage class, Storage, Data transfer (Data transferred out of S3 Region (within region is free)), and Request and data retrieval \\ \\
+There's several features that drive pricing: running clock hours, type of database (size, engine, memory class, etc.), storage, purchase type (on-demand or reserved), database count, API requests, deployment type (single AZ or multiple AZ), and data transfer. \\ \\
+\textbf{Total Cost of Ownership} is a financial estimate that helps you understand both the direct and indirect costs of AWS. \\ \\
+\textbf{Application Discovery Service} helps you plan migration projects to the AWS Cloud. Used to estimate TCO and works with other services to migrate services.  \\ \\
+A few ways to reduce TCO: Minimize capital expenditures, utilize reserved instances, and right sized resources \\ \\
+\textbf{Pricing Calculator} provides an estimate of AWS fees and charges.
+\subsection{Billing Services}
+AWS provides tools to track your spend. \\ \\
+\textbf{Budgets} allow you set custom budgets that alert you when your costs or usage excced defined limits. There's 3 budget types: cost budgets, usage budgets, and reservation budgets. AWS budgets are useful for monitoring free tier usage so you don't generate usage beyond them. \\ \\
+\textbf{Cost and Usage Report} contains the most comprehensive set of cost and usage data up to the instance ID. This is useful for viewing granular data about your AWS bill
+\textbf{Cost Explorer} Allows you to analyze your past costs and forecast future costs. 
+\subsection{Governance Services}
+\subsection{Management Services}
+\subsection{Support Plans}
 \end{document}
