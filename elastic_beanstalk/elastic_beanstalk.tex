@@ -1,0 +1,24 @@
+%PREAMBLE
+\documentclass{article}% use option titlepage to get the title on a page of its own.
+\title{Elastic Beanstalk}
+\date{August 2nd, 2021}
+\author{Matt Waismann}
+
+%MAIN
+\begin{document}
+\maketitle
+\section{What is Elastic Beanstalk?}
+Elastic Beanstalk allows you to deploy and scale web applications on widely used application server platforms. It supports applications written in many of the most common programming used.
+You can select which application server platform you want to use (e.g. Apache http server, Tomcat, Nginx, Passenger, and IIS). Developers can focus on writing the code and don't have to worry
+about backend stuff like provisioning load balances, launching EC2 instances and configuring autoscaling groups, installing your application server platform, configure S3 buckets, and configure databases. 
+It integrates with CloudTrail and CloudWatch to monitor and troubleshoot. ElasticBeanstalk. More technically, Elastic Beanstalk manages:
+\begin{itemize}
+    \item Infrastructure - provisioning and infrastructure, load balancing, autoscaling, and application health monitoring
+    \item Application Platform - installation and management of the application stack, including patching and updates to your OS and application platform
+    \item You are in Control - No extra charges, meaning you're paying only for the services that Elastic Beanstalk provisions. 
+\end{itemize}
+
+\section{Deploying Applications with Elastic Beanstalk - Demo}
+We will start of with PHP code in a zip file and upload the code to EB. EB will then handle the rest with infrastructure and provisioning. 
+
+\end{document}
