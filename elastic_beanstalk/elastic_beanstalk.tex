@@ -8,10 +8,10 @@
 \begin{document}
 \maketitle
 \section{What is Elastic Beanstalk?}
-Elastic Beanstalk allows you to deploy and scale web applications on widely used application server platforms. It supports applications written in many of the most common programming used.
+Elastic Beanstalk allows you to deploy and scale web applications on widely used application server platforms. It supports applications written in many of the most common programming languages.
 You can select which application server platform you want to use (e.g. Apache http server, Tomcat, Nginx, Passenger, and IIS). Developers can focus on writing the code and don't have to worry
-about backend stuff like provisioning load balances, launching EC2 instances and configuring autoscaling groups, installing your application server platform, configure S3 buckets, and configure databases. 
-It integrates with CloudTrail and CloudWatch to monitor and troubleshoot. ElasticBeanstalk. More technically, Elastic Beanstalk manages:
+about backend stuff like provisioning services, load balancing, launching EC2 instances and configuring autoscaling groups, installing your application server platform, configuring S3 buckets, and configuring databases. 
+Elastic Beanstalk integrates with CloudTrail and CloudWatch to monitor and troubleshoot. In particular, Elastic Beanstalk manages:
 \begin{itemize}
     \item Infrastructure - provisioning and infrastructure, load balancing, autoscaling, and application health monitoring
     \item Application Platform - installation and management of the application stack, including patching and updates to your OS and application platform
@@ -19,6 +19,12 @@ It integrates with CloudTrail and CloudWatch to monitor and troubleshoot. Elasti
 \end{itemize}
 
 \section{Deploying Applications with Elastic Beanstalk - Demo}
-We will start of with PHP code in a zip file and upload the code to EB. EB will then handle the rest with infrastructure and provisioning. 
+When creating an application in Elastic Beanstalk, you are first asked to select a platform. The platform options include .NET on Windows Server, Docker, GlassFish, Java, Python, Ruby, Tomcat, Node.js, and others. The high level difference between a platform
+and a programming language is that a language offers syntax and style while the platform is more of an execution environment which run programming languages. For example, .NET is a developer platform for building applications in many languages like C\#. \\ \\ 
 
+\noindent Here's what AWS docs say about platforms: 
+\begin{quote}
+Elastic Beanstalk supports multiple platforms that you can use to build your applications. A platform is a combination of an operating system (OS), runtime, web server, application server, and Elastic Beanstalk components. Each platform has multiple platform versions—combinations of specific component versions. You deploy your application code to a specific platform version.
+A platform branch is a line of successive platform versions sharing specific (typically major) versions of some of their components, such as the operating system (OS), runtime, or Elastic Beanstalk components. An Elastic Beanstalk platform may support several concurrent platform branches. When we release platform updates, we provide a new platform version for each platform branch. A platform branch has a support lifecycle—it can be in beta, a regular supported branch, or a retiring (deprecated) branch.
+\end{quote}
 \end{document}

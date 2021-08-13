@@ -1,0 +1,115 @@
+%PREAMBLE
+\documentclass{article}% use option titlepage to get the title on a page of its own.
+\usepackage{blindtext} % a package for creating random text
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{The Django Framework in Python}
+\date{August 13th, 2021}
+\author{Matt Waismann}
+
+%MAIN
+\begin{document}
+\maketitle
+\section{Introduction}
+Django can be installed via pip. There's a useful commands for starting a Django project:
+\begin{itemize}
+    \item django-admin startproject \textit{project\_name}
+\end{itemize}
+This will create a directory with the project's name and within that four files:
+\begin{enumerate}
+    \item \_\_init\_\_.py - an empty file 
+    \item settings.py - this is where settings and configurations are set/changed
+    \item urls.py - this is where urls map users to different locations in the application 
+    \item wsgi.py - this is how the python app and the web server communicate
+\end{enumerate}
+In the same location as the project there will be another file:
+\begin{enumerate}
+    \item manage.py - you will regularly run 'python manage.py runserver'. This sets up a version of your application on your local host.
+     Tip: instead of using the IP address of your local machine to access your local host, you can use the alias 'localhost:<port nubmer>'
+\end{enumerate}
+
+\section{Applications and Routes}
+Django allows for multiple "apps" within a website. For example, there could be a blog portion of the website or a store part and they can each be their own app. This is great for including similar apps across multiple projects. To create a new app, run the following command in the
+directory that contains the manage.py file: \textit{python manage.py startapp your\_app\_name}. The app creates a new directory with your app name and within that directory there should be several files. We will explore these later. \\ \\
+
+\subsection{View.py and urls.py}
+We will see this file already imports render from django.shortcuts. We will also import 
+\begin{lstlisting}
+    from django.HttpResponse import HttpResponse
+\end{lstlisting}
+Within this file we should create a function called 'home'. This will handle the traffic from the home page of the app. This is where the logic goes for how we want to handle certain routes. This function will return what we want the user to see when they are sent to this route.
+\begin{lstlisting}
+    def home(request):
+        return HttpResponse('<h1>Blog Home</h1>')
+\end{lstlisting}
+We'll explain the 'request' parameter later. Since function will handle the traffic when users go to the home page, we have to map the url pattern to this view function. To do this we will create a 'urls.py' file inside the apps directory. This will be similar to the projects 'urls.py' file. It should look like this
+\begin{lstlisting}
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path('', views.home, name = 'my\_app\_name\-home'),
+    ]
+\end{lstlisting}
+We still need to go to our project's 'url.py' file and include the following lines 
+\begin{lstlisting}
+    from django.urls import path, include
+
+    urlpatterns[
+        path('admin/' admin.site.urls),
+        path('my_app_name/', include('my_app_name.urls')),
+    ]
+\end{lstlisting}
+This is necessary because we need to tell the whole web application which url maps to the app. From there, the \textit{path} function will look inside the \textit{my\_app\_name.urls} file to figure out where the
+rest of the url maps to. The \textit{include} function simply tells path to exclude 'my\_app\_name/' from the string match it will attempt to do when looking inside 'my\_app\_name.urls' for the appropriate matching route. \\ \\
+
+\textbf{Example}\\ Suppose a user requests 'mydomainname.com/my\_app\_name/about/'. The web application will first look at the main/master 'urls.py' file in the project directory and check for 'my\_app\_name/'. Since the path is there, \textit{path} then goes to the 'my\_app\_name.urls' file (with the truncated url) and then
+searches there for the urlpattern 'about/'. If the urlpattern exists then the path function will look inside wherever that path function maps to. This could be another urls file for another app or a 'Views.py' function which returns something to the user. Our current app doesn't have a place to route 'about/' to so let's include something:
+\begin{lstlisting}
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path('', views.home, name = 'my\_app\_name\-home')
+        path('about/', views.about, name = 'my\_app\_name\-about'),
+    ]
+\end{lstlisting}
+This tells path to call the \textit{views.about} function. \\
+
+This may seem like unneccesary structure at first, but the benefit of using this heirarchical approach is that a developer only needs to change the parent 'node' (i.e. from my\_app\_name to my\_app\_name\_2) and all of the urls which follow from there will automatically reroute. This makes the code more easily modifiable. \\
+
+\textbf{Note} \textit{(credit: https://stackoverflow.com/questions/42212122/why-django-urls-end-with-a-slash)} \\ 
+
+\noindent The reason why a trailing '/' is used at the end of url pattern is most easily explained with an example: \\
+
+\noindent Now the reason for a trailing slash, consider a view (in any framework) which relatively resolves about.html for a user at path, users/awesomeUser
+since users/awesomeUser and users/awesomeUser/ are different \\ 
+
+\noindent If the user is at users/awesomeUser, the browser will resolve it as users/about.html because there ain't a trailing slash which we don't want
+
+\noindent If the user is at users/awesomeUser/, the browser will resolve it as users/awesomeUser/about.html because there is a trailing slash \\ \\
+
+
+\end{document}
