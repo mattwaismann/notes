@@ -1,0 +1,33 @@
+%PREAMBLE
+\documentclass{article}% use option titlepage to get the title on a page of its own.
+\usepackage{blindtext} % a package for creating random text
+\title{AWS Developer Associate Notes}
+\date{August 24th, 2021}
+\author{Matt Waismann}
+
+%MAIN
+\begin{document}
+\maketitle
+\section{Introduction}
+There's five domains for the exam:
+\begin{enumerate}
+    \item Deployment - 22\%
+    \item Security - 26\%
+    \item Development with AWS Services - 30\%
+    \item Refactoring - 10\%
+    \item Monitoring and Troubleshooting - 12\%
+\end{enumerate}
+
+A minimum passing score is 720/1000. The exam has 65 questions and is 130 minutes in length. The questions will be multiple choice.
+
+\section{Serverless Computing}
+\subsection{Introduction} Serverless allows you to run applications in the cloud without having to worry about managing servers. This typical server management tasks are capacity provisioning, patching, auto scaling, and high availability. Also, serverless applications scale easily.
+Serverless applications are also low cost because they are event driven, meaning you are only charged when your code is executed.
+Some examples of Serverless AWS services are Lambda, SQS (Simple Queue Service), SNS (Simple Notification Service), API Gateway, DynamoDB, and S3. 
+\subsection{Lambda}
+Lambda is a severless compute service.Lambda takes care of everything to run your code, including the runtime environment. It supports common languages like Java, C\#, Python, and Ruby. You are charged based on the number of requests, their duration, and the amount of memory used by your Lambda function. Lambda is event-driven, meaning Lambda functions can be automatically triggered by other AWS services or called directly from any web or mobile app. These events could be changes made to data in S3 or DynamoDB table. Other triggers include DynamoDB, Kinesis, SQS, Application Load Balancer, API Gateway, Alexa, CloudFront, S3, SNS, SES, CloudFormation, CloudWatch, CodeCommit, CodePipeline, and many more. You can use API Gateway to configure an HTTP endpoint, allowing you to trigger your function at any time using an HTTP request. 
+Lambda functions are indepedent, meaning each event will trigger a single function. 
+
+\subsection{API Gateway}
+API stands for Application Programming Interface. We use APIs to interact with web applications, and applications use APIs to communicate with each other. Generally, an API sends a response in JSON format. 
+\end{document}
