@@ -30,4 +30,29 @@ Lambda functions are indepedent, meaning each event will trigger a single functi
 
 \subsection{API Gateway}
 API stands for Application Programming Interface. We use APIs to interact with web applications, and applications use APIs to communicate with each other. Generally, an API sends a response in JSON format. 
+API Gateway is a service that allows you to publish, maintain, and monitor APIs. API Gateway supports two types of APIs 
+\begin{itemize}
+    \item RESTful APIs - Stateless, serverless workloads
+    \item Websocket APIs - real-time, two-way, stateful communication (e.g. chat apps)
+\end{itemize}
+API Gateway provides a single endpoint for all client traffic interacting with the backend of your application. So if a user makes a request to our AWS environment then API Gateway directs that request to the appropriate services. More specifically what is API Gateway?
+\begin{enumerate}
+    \item It allows you to connect to applications running on Lambda, EC2, or Elastic Beanstalk and services like DyanmoDB and Kinesis
+    \item Supports multiple endpoints and targets
+    \item Support multiple versions of your API. This allows for different versions for development, testing, and production environments.  
+\end{enumerate} 
+In addition it is serverless, integrates with cloud watch to logAPI calls, latencies and error rates, and it supports throttling to manage traffic spikes and DDoS attacks. 
+\subsection{Lambda Versions}
+When you create a new Lambda function there's only one version: \$LATEST. When you upload a new version of the code to Lambda, this version becomes \$LATEST. You can create multiple versions of your function code and use aliases to reference the version you want to use as part of the ARN. In a development environment you might want to maintain a few versions of the same function as you develop and test your code. An alias is like a pointer to a specific version of the function code. 
+Use Lambda versioning and alises to point your applications to a specific version if you don't want to use \$LATEST. 
+\subsection{Lambda Concurrent Executions Limit} 
+There is a limit to the number of concurrent executions in Lambda. AWS Support can help increase that. Reserved concurrency guarantees a certain number of concurrent requests are allowed for a given Lambda function.
+\subsection{Lambda and VPCs}
+If a Lambda needs to access/communicate a service within a subnet in a private VPC. To enable Lambda to Access VPC Resources:
+\begin{itemize}
+    \item You need to allow the function to connect to the private subnet
+    \item Lambda needs the following VPC Configuration information so it can access the VPC: private subnet ID and security group ID. Lambda uses this information to set up ENIs (Elastic Network Interface) using an available IP address from your private subnet. All of this can be added inside the CLI. In the console, a network can be added when creating the Lambda function very easily 
+    \item Doing this will allow your function to access resources in VPC.
+\end{itemize} 
+
 \end{document}
