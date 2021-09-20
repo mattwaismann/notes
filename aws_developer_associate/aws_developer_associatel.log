@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  24 AUG 2021 15:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  15 SEP 2021 11:39
 entering extended mode
 **c:/Users/mattwais/Desktop/notes/aws_developer_associate/aws_developer_associatel.tex
 (c:/Users/mattwais/Desktop/notes/aws_developer_associate/aws_developer_associatel.tex
@@ -71,19 +71,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 10.
  [1
 
-{C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] (aws_developer_associatel.aux) ) 
+{C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
+Overfull \hbox (3.47287pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/10 through-put of 40 MB/s per TB. Frequently-accessed, throughput-intenstive
+ []
+
+[4] [5] [6] (aws_developer_associatel.aux) ) 
 Here is how much of TeX's memory you used:
- 605 strings out of 478870
- 11127 string characters out of 2847414
- 308703 words of memory out of 3000000
- 18583 multiletter control sequences out of 15000+600000
- 407377 words of font info for 40 fonts, out of 8000000 for 9000
+ 610 strings out of 478870
+ 11184 string characters out of 2847414
+ 309703 words of memory out of 3000000
+ 18586 multiletter control sequences out of 15000+600000
+ 408020 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,6n,52p,945b,191s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on aws_developer_associatel.pdf (2 pages, 65466 bytes).
+ <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on aws_developer_associatel.pdf (6 pages, 89157 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

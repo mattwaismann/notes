@@ -1,0 +1,49 @@
+%PREAMBLE
+\documentclass{article}% use option titlepage to get the title on a page of its own.
+\usepackage{blindtext} % a package for creating random text
+\usepackage{listings} % a package to embed code
+\usepackage{color} 
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{Logging}
+\date{Sep 20th, 2021}
+\author{Matt Waismann}
+
+%MAIN
+\begin{document}
+\maketitle
+Without logging, most people check the program behaved correctly by embedding print statements at various points in the script. The better practice is to use \textit{logging}. \\
+
+There are five standard logging levels:
+\begin{itemize}
+  \item \# DEBUG: Detailed information, typically of interest only when diagnosing problems.
+  \item \# INFO: Confirmation that things are working as expected.
+  \item \# WARNING: An indication that something unexpected happened, or indicative of some problem in the near future (e.g. 'disk space low'). The software is still working as expected.
+  \item \# ERROR: Due to a more serious problem, the software has not been able to perform some function.
+  \item \# CRITICAL: A serious error, indicating that the program itself may be unable to continue running.
+\end{itemize}
+
+\begin{lstlisting}
+    print("Hello World")
+\end{lstlisting}
+\end{document}

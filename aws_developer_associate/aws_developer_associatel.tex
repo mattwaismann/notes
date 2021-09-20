@@ -20,6 +20,137 @@ There's five domains for the exam:
 
 A minimum passing score is 720/1000. The exam has 65 questions and is 130 minutes in length. The questions will be multiple choice.
 
+\section{IAM Identity Access Management}
+\begin{itemize}
+    \item Mangage users and their access to the AWS console
+    \item Allows for Multi-Factor Authentication
+    \item Can provide temporary access to aws services
+    \item Supports PCI DSS requirement (payments industry)
+    \item Allows for users, groups (which you can add users too), and roles (you create roles and assign them to aws services or users)
+    \item IAM policy is a document that defines one or more permissions for a user, group, or role 
+    \item IAM Policy Simulator allows you to test the effects of IAM policies before commiting them to production or for troubleshooting existing policies.
+    \item IAM is universal, not regional
+    \item New users have no permissions when they are first created
+    \item New users are assigned an access key ID and secret access key when their accounts are created. You can use access keys to access AWS via the APIs and command line.
+    \item You only get to view the access key ID and secret access key once. If you lose them, you must regenerate them. 
+    \item You can create and customize your own password rotation policies for your users.
+    \item AWS does not recommend that EC2 instances have credential stored on them
+\end{itemize}
+
+\section{Elastic Compute Cloud (EC2)}
+\begin{itemize}
+    \item Resizable compute capacity in the Cloud. Like a VM hosted on AWS. Designed to make web-scale cloud computing easier for developers.
+    \item AWS was the first company to introudce a public cloud compute service like EC2
+    \item Pay only for what you use
+    \item No wasted capacity, you can grow or shrink as you need
+\end{itemize}
+There are different pricing options for EC2
+\begin{itemize}
+    \item On Demand - by the hours or the second, depending on the instance you run
+    \item Reserved Instance - for one or three years, up to 72\% discount. But the reservation only applies to a region so other instances in other regions won't be covered. Three types:
+    \begin{itemize}
+        \item Standard RIs: Up to 72\% off. But cannot change instance size (e.g. t3 large to t3 extra large)
+        \item Convertible RIs: Up to 54\% off on-demand price. Has the option to change to a different RI type of equal or greater value (allows for increasing instance size)
+        \item Scheduled RIs: Lanch within the time window you define (e.g. A process happens once a month on a given date)
+    \end{itemize} 
+    \item Spot - Purchase unused capacity at a discount of 90\%. Prices flucuate according to supply and demand 
+    \item Dedicated - A physical EC2 server dedicated for your use. The most expensive option. Useful for regulartory requirements that may not support multi-tenant virtualization.
+\end{itemize}
+
+Savings Plans
+\begin{itemize}
+    \item Save up to 72\% by commiting a specific ammount of compute power measured in \$/per hour for a one year or three year period
+    \item Not just for EC2 but also other serverless technologies like Lambda and Fargate.
+\end{itemize}
+The pricing calculator is a way see how the different EC2 pricing options will affect pricing.
+
+\subsection{EC2 Instance Types}
+\begin{itemize}
+    \item Hardware - The instance types determines the hardware of the host computer used for your instance.
+    \item Capabilities - Each instance type offers different compute, memory, and storage capabilities and are grouped in instance families.
+    \item Application Requirements - Select an instance type based on the requirements of your application 
+    \item We do not need to memorize the different instance types for this exam. There's serveral instance type famlilies
+    \begin{itemize}
+        \item Micro - low cost, often free tier eligible
+        \item General Purpose
+        \item Compute Optimized - a higher ratio of vCPU to memory. This is useful for batch processing, analytics, and high performance science and engineering purposes
+        \item FPGA - Field programmable data arrays
+        \item GPU instances - Great for graphics processing or parallel processing
+        \item Machine learning ASIC instnaces - uses the inferentia chip 
+        \item Memory Optimized - Memory optimized with the lowest cost per GB of random
+        \item Storage Optimized - Provides direct storage options attached. Helpful for databases
+    \end{itemize}
+The instance type names read like: 't2.nano, t2.xlarge, p2.8xlarge, etc.'
+\end{itemize}
+\subsection{Elastic Block Store}
+EBS volumes are storage volumes that you can attach to your EC2 instances. Think of these EBS volumes as the disks attached to your PC. Every EC2 instance has an EBS volume attached to it for the operating system, often Amazon Linux 2. 
+You can add more volumes depending on the needs of your application.
+\begin{itemize}
+    \item Designed for mission critical workloads
+    \item These can can dynamically scale in real time without any downtime for your service
+\end{itemize}
+EBS Types
+\begin{itemize}
+    \item General Purpose SSD (gp2) - a balance of price and performance. 3 IOPS per GiB, up to max of 16,000 IOPS per volume. Good for developmenet and testing or applications that aren't latency sensitive.
+    \item Provisioned IOPS SSD (io1) - The high performance option. Up to 64,000 IOPS per volume. 50 IOPS per GiB. Use if you need more than 16,000 IOPS. 
+    \item Provisioned IOPS SSD (io2) - Latest generation. Higher durability and more IOPS. This is the same price as io1.
+    \item Throughput Optimized HHD (st1) - Low-cost HDD volume. Baseline throughput of 40 MB/s per TB. Frequently-accessed, throughput-intenstive workloads. Great for Big Data, data warehouses, ETL, and log processing. A cost effective way to store mountains of data. Max throughput is 500 MB/s per volume.
+    \item Cold HDD (sc1) - Lowest cost option. Baseline throughput of 12 MB/s per TB. Ability to burst up to 80 MB/s per TB. Max throughput of 250 MB/s per volume. A good option if performance is not a factor. Max throughput of 250 MB/s per volume
+\end{itemize}    
+IOPS vs. Throughput
+\begin{itemize}
+    \item IOPS - measures the number of read and write operations per second. Important metric for low latency apps. Choose Provisioned IOPS SSD (io1 or io2)
+    \item Throughput - measures the number of bits read or written per second (MB/s). Important metric for large datasetse, large I/O sizes, complex queries.
+\end{itemize}
+Few extra tips
+\begin{itemize}
+    \item If you create a EBS volume from an encrypted snapshot, then you will get an encrypted volume
+    \item If you create an EBS volume from an unecrypted snapshot, then you will get an unencrypted volume
+\end{itemize}
+
+\subsection{Elastic Load Balancer}
+A load balancer distributes network traffic across a group of servers. The load balancer can use many different alogrithms for how it distributes web traffic. Also if a server fails, the load balancer will automatically route traffic to the other servers.
+
+There's three options to chose from
+\begin{itemize}
+    \item Application Load Balancer - HTTP and HTTPs traffic. They support advanced request routing to specific web servers based on the HTTP header. They operate at Layer 7 of the OSI model: (The OSI Model aka 7 layer model is a conceptual framework which describes the function of a network. NOT EXAMINABLE)
+        \begin{itemize}
+        \item Layer 7 - Application: What the end user sees, HTTP, web browers
+        \item Layer 6 - Presentation: Data is in a useable format. Encryption, SSH.
+        \item Layer 5 - Session: Maintains connections and sessions.
+        \item Layer 4 - Transport: Transmits data using TCP and UDP.
+        \item Layer 3 - Network: Logically routes packets, based on IP address
+        \item Layer 2 - Data Link: Physically transmits data based on MAC addresses
+        \item Layer 1 - Physical: Transmits bits and bytes over physical devices
+    \end{itemize}
+    \item Network Load Balancer - TCP traffic (it is high performance). It operates at Layer 4 and is expensive.
+    \item Classic Load Balacncer - HTTP/HTTPS and TCP (Legacy). Supports Layer 7-specific features, such as X-Forwarded-For headers and sticky sessions. Supports Layer 4 load balancing for applications that rely purely on the TCP protocol
+    \begin{itemize}
+        \item X-Forwarded-For Header is an HTTP header which allows you to identify the originating IP address of a client connecting through a load balancer. To elaborate, the webserver only see's the load balancer's IP address not the connecting client. The X-Forwarded-For Header allows for the originating IP address to be seen on the web server.
+    \end{itemize}
+\end{itemize}
+Common Load Balancer Errors:
+\begin{itemize}
+    \item Error 504 - Gateway Timeout. This means the target (the downstream web or application server) has failed to respond. It could be that the ELB couldn't establish a connection to the target. It could also be an application error.
+\end{itemize}
+
+\subsection{Route 53}
+Route 53 is Amazon's DNS service which allows you to map a domain name to EC2 instance, Load Balancer, or S3 bucket
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 \section{Serverless Computing}
 \subsection{Introduction} Serverless allows you to run applications in the cloud without having to worry about managing servers. This typical server management tasks are capacity provisioning, patching, auto scaling, and high availability. Also, serverless applications scale easily.
 Serverless applications are also low cost because they are event driven, meaning you are only charged when your code is executed.
@@ -54,5 +185,4 @@ If a Lambda needs to access/communicate a service within a subnet in a private V
     \item Lambda needs the following VPC Configuration information so it can access the VPC: private subnet ID and security group ID. Lambda uses this information to set up ENIs (Elastic Network Interface) using an available IP address from your private subnet. All of this can be added inside the CLI. In the console, a network can be added when creating the Lambda function very easily 
     \item Doing this will allow your function to access resources in VPC.
 \end{itemize} 
-
 \end{document}
