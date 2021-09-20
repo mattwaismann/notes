@@ -34,7 +34,7 @@
 \maketitle
 Without logging, most people check the program behaved correctly by embedding print statements at various points in the script. The better practice is to use \textit{logging}. \\
 
-There are five standard logging levels:
+There are five standard logging levels. The levels are ordered by severity:
 \begin{itemize}
   \item \# DEBUG: Detailed information, typically of interest only when diagnosing problems.
   \item \# INFO: Confirmation that things are working as expected.
@@ -42,8 +42,44 @@ There are five standard logging levels:
   \item \# ERROR: Due to a more serious problem, the software has not been able to perform some function.
   \item \# CRITICAL: A serious error, indicating that the program itself may be unable to continue running.
 \end{itemize}
-
+Logging functionality can be accessed through the standard library 'logging'
 \begin{lstlisting}
-    print("Hello World")
+    import logging
+\end{lstlisting}
+The default level for logging is set to 'WARNING'. This means it will capture everything that is everything at level 'WARNING' and above. Therefore, it includes 'WARNING', 'ERROR', and 'CRITICAL'. The default logging behaviour is to just log results to the console. If we want to log levels below WARNING we need to modify the default behavior. \\
+
+Here's a logging example:
+\begin{lstlisting}
+  add_result = add(num_1, num_2)
+  logging.warning('Add: {} + {} = {}'.format(num_1, num_2, add_result))
+\end{lstlisting}
+Output in the console will look like:
+\begin{lstlisting}
+WARNING:root:Add: 10 + 5 = 15
+\end{lstlisting}
+Of course, this isn't a warning so lets instead change the default logging level
+\begin{lstlisting}
+  logging.basicConfig(level = logging.DEBUG)
+\end{lstlisting}
+Let's now change the logging output level to something more appropriate like 'DEBUG'
+\begin{lstlisting}
+  add_result = add(num_1, num_2)
+  logging.warning('Add: {} + {} = {}'.format(num_1, num_2, add_result))
+\end{lstlisting}
+As said earlier, default logging only outputs to the console. If you prefer to have a log file, include a file name in the logging.basicConfig mutator
+\begin{lstlisting}
+  logging.basicConfig(filename = 'test.log', level = logging.DEBUG)
+\end{lstlisting}
+The default log format is to include logging level is 
+\begin{lstlisting}
+  LOGLEVEL:logger:message (e.g. DEBUG:root:Add: 10 + 5 = 15 )
+\end{lstlisting}
+To modify the log format to include things like date and time, include a 'format' argument in the logging.basicConfig mutator. 
+\begin{lstlisting}
+  logging.basicConfig(filename = 'test.log', level = logging.DEBUG, format = '%(asctime)s:%(levelname)s:%(message)s')
+\end{lstlisting}
+Now the output in the log file will look like
+\begin{lstlisting}
+  2021-09-20 12:53:08,118: DEBUG: Add: 10 + 5 = 20
 \end{lstlisting}
 \end{document}

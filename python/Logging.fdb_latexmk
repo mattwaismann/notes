@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1632165614 "c:/Users/mattwais/Desktop/notes/python/Logging.tex" "Logging.pdf" "Logging" 1632165615
+["pdflatex"] 1632167657 "c:/Users/mattwais/Desktop/notes/python/Logging.tex" "Logging.pdf" "Logging" 1632167658
   "C:/Users/mattwais/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1627594146 11548 a4797357f747e78f8a99034820f124ea ""
   "C:/Users/mattwais/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1627502457 9730145 22bfdca3c30ba593344a483d55b70381 ""
   "C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1628879693 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -36,10 +36,10 @@
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty" 1623004943 204271 bae5b2d457283e99567249c1990510be ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty" 1623004942 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
-  "Logging.aux" 1632165615 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Logging.tex" 1632165614 1715 1d36044cb4876f083cbecca6dd444524 ""
-  "c:/Users/mattwais/Desktop/notes/python/Logging.tex" 1632165614 1715 1d36044cb4876f083cbecca6dd444524 ""
+  "Logging.aux" 1632167658 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "Logging.tex" 1632167657 3688 d03db3416f1625ca3b6cfbc759ab5e49 ""
+  "c:/Users/mattwais/Desktop/notes/python/Logging.tex" 1632167657 3688 d03db3416f1625ca3b6cfbc759ab5e49 ""
   (generated)
+  "Logging.aux"
   "Logging.log"
   "Logging.pdf"
-  "Logging.aux"
