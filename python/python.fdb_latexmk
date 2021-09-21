@@ -1,9 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1632186964 "c:/Users/mattwais/Desktop/notes/python/Logging.tex" "Logging.pdf" "Logging" 1632186964
+["pdflatex"] 1632244375 "c:/Users/mattwais/Desktop/notes/python/python.tex" "python.pdf" "python" 1632244376
   "C:/Users/mattwais/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1627594146 11548 a4797357f747e78f8a99034820f124ea ""
   "C:/Users/mattwais/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1627502457 9730145 22bfdca3c30ba593344a483d55b70381 ""
   "C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1628879693 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
+  "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
@@ -17,6 +18,7 @@
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt9.tfm" 1136768653 764 c98a2af25c99b73a368cf7336e255190 ""
+  "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
@@ -36,10 +38,10 @@
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty" 1623004943 204271 bae5b2d457283e99567249c1990510be ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty" 1623004942 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
-  "Logging.aux" 1632186964 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "Logging.tex" 1632186963 4574 58f6f4a8225a2a32631e504a3a933213 ""
-  "c:/Users/mattwais/Desktop/notes/python/Logging.tex" 1632186963 4574 58f6f4a8225a2a32631e504a3a933213 ""
+  "c:/Users/mattwais/Desktop/notes/python/python.tex" 1632244374 4620 ce16ca0cf74c45d9dbbdd39e4d65389b ""
+  "python.aux" 1632244376 229 252384610dbeb89eb6bc8f59db82e273 "pdflatex"
+  "python.tex" 1632244374 4620 ce16ca0cf74c45d9dbbdd39e4d65389b ""
   (generated)
-  "Logging.pdf"
-  "Logging.aux"
-  "Logging.log"
+  "python.pdf"
+  "python.log"
+  "python.aux"

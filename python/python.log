@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  20 SEP 2021 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  21 SEP 2021 10:12
 entering extended mode
-**c:/Users/mattwais/Desktop/notes/python/Logging.tex
-(c:/Users/mattwais/Desktop/notes/python/Logging.tex
+**c:/Users/mattwais/Desktop/notes/python/python.tex
+(c:/Users/mattwais/Desktop/notes/python/python.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-07-12> (C:\Users\mattwais\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
@@ -81,8 +81,8 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box52
-) (Logging.aux)
-\openout1 = `Logging.aux'.
+) (python.aux)
+\openout1 = `python.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
@@ -120,25 +120,25 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 34.
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 [1
 
-{C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] (Logging.aux) ) 
+{C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] (python.aux) ) 
 Here is how much of TeX's memory you used:
- 2991 strings out of 478870
- 42483 string characters out of 2847414
- 582968 words of memory out of 3000000
- 20932 multiletter control sequences out of 15000+600000
- 407612 words of font info for 41 fonts, out of 8000000 for 9000
+ 2994 strings out of 478870
+ 42510 string characters out of 2847414
+ 581966 words of memory out of 3000000
+ 20934 multiletter control sequences out of 15000+600000
+ 408217 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,52p,416b,1647s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Logging.pdf (3 pages, 75922 bytes).
+ 42i,6n,52p,415b,1667s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on python.pdf (3 pages, 86912 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
