@@ -110,4 +110,77 @@ The 'employee.log' file should look like
 \end{lstlisting}
 
 \section{Error Handling}
+A common type of error in Python is when a certain expression is not formed in inaccordance with the prescribed usage. Such an error is called a syntax error. Syntax errors are detected before the program is executed. 
+\begin{lstlisting}
+  >>> print "hello world"
+  SyntaxError: Missing parentheses in call to 'print'. Did you mean print("hello")?
+\end{lstlisting}
+Here we will be concerned with a different type of error, a runtime error, called an exception. This is type of error is detected by the Python interpreter while the program is executing. When these errors occur, Python writes a Traceback to the console, specificying the path to where the interpreter detected the error and the name of the error (e.g. FileNoteFoundError). \\ 
+
+The fundemental building blocks of error handling are
+\begin{lstlisting}
+  try:
+      pass
+  except Exception:
+      pass
+  else:
+      pass
+  finally:
+      pass
+\end{lstlisting}
+The Python interpreter will execute whatever code is in the try statement. If an exception occurs, instead of the program stopping, we enter the except clause.
+The generalized exception is 'Exception'. This will capture any exception that occurs in the try block. However, this is not a best practice since the motivation 
+for error handling is to address specific errors that occur. We will only enter the except clause if no exception is specified, the generalized 'Exception' is used, or the correct exception expression is used. \\
+
+Note that we can include multiple except clauses. The Python interpreter will attempt each except statement until it finds one that allows the exception to enter (the three cases described earlier) then it will not attempt to enter any
+other except statements. Therefore, it's best practice to include the most specific except statements at the top and the most general exceptions (if you want them) at the bottom. \\
+
+The \textit{as} clause can be used to assign an alias to an exception name in the except statement. This is one of the three statements in Python which permit the use of \textit{as}.
+The other two cases are in \textit{import} statements and the \textit{with} statement to name the resource being allocated. Here we see the usage for except statements:
+
+\begin{lstlisting}
+  try:
+    f = open('test_file.txt')
+  except FileNotFoundError as e:
+    print(e)
+\end{lstlisting}
+
+The \textit{else} clause executes code if the \textit{try} clause doesn't raise an exception. \\
+
+The \textit{finally} clause executes regardless of what happens, exception or not. This has a common use case of closing a connection to a database. \\
+
+Note that we have the ability to raise exceptions ourself with the use of the \textit{raise} clause. This typically is used inside of an if statement where a certain failure criteria was met.
+We can use the \textit{raise} clause within a try statement or even outside the context of exception hanlding statements. \\ \\
+
+Here's an example that summarizes everything we've discussed:
+\begin{lstlisting}
+  try:
+    f = open('my_data.txt')
+    if f.name == "not_my_data.txt':
+        raise Exception("This is the wrong file")
+        raise ValueError("This is just to show that you can raise different types of exceptions")
+    except FileNoteFoundError as e:
+        print(e)
+    except Exception:
+        print("something else went wrong")
+    else:
+        print(f.read())
+        f.close()
+    finally:
+        print("The code executed but it may or may not have contained an exception. I am the finally statement so I execute regardless.")
+\end{lstlisting}
+
+\subsection{Creating Your Own Exception}
+To create your own exception you must create a custom exception class that inherits from the Exception class. The structure should be as follow:
+\begin{lstlisting}
+  class CoffeeTooHotException(Exception):
+      def __init__(self, msg):
+          super().__init__(msg)
+\end{lstlisting}
+
+Now you can raise a new exception like any other exception:
+\begin{lstlisting}
+    if self.__temperature > 85:
+        raise CoffeeTooHotException("Coffee too hot")
+\end{lstlisting}
 \end{document}

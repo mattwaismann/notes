@@ -129,6 +129,7 @@ INPUT C:\Users\mattwais\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.t
 INPUT C:\Users\mattwais\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt9.tfm
 OUTPUT python.pdf
 INPUT C:\Users\mattwais\AppData\Local\MiKTeX\pdftex\config\pdftex.map
+INPUT C:\Users\mattwais\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT python.aux
 INPUT C:\Users\mattwais\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\mattwais\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk

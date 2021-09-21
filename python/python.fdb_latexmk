@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1632244375 "c:/Users/mattwais/Desktop/notes/python/python.tex" "python.pdf" "python" 1632244376
+["pdflatex"] 1632248644 "c:/Users/mattwais/Desktop/notes/python/python.tex" "python.pdf" "python" 1632248645
   "C:/Users/mattwais/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1627594146 11548 a4797357f747e78f8a99034820f124ea ""
   "C:/Users/mattwais/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1627502457 9730145 22bfdca3c30ba593344a483d55b70381 ""
   "C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1628879693 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -38,10 +38,10 @@
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty" 1623004943 204271 bae5b2d457283e99567249c1990510be ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty" 1623004942 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
   "C:/Users/mattwais/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
-  "c:/Users/mattwais/Desktop/notes/python/python.tex" 1632244374 4620 ce16ca0cf74c45d9dbbdd39e4d65389b ""
-  "python.aux" 1632244376 229 252384610dbeb89eb6bc8f59db82e273 "pdflatex"
-  "python.tex" 1632244374 4620 ce16ca0cf74c45d9dbbdd39e4d65389b ""
+  "c:/Users/mattwais/Desktop/notes/python/python.tex" 1632248644 8767 20943b4a8c1612a9e20c93dcf9f9c56a ""
+  "python.aux" 1632248645 349 e0b555be7dcaaa9ba763b933ac7785c2 "pdflatex"
+  "python.tex" 1632248644 8767 20943b4a8c1612a9e20c93dcf9f9c56a ""
   (generated)
+  "python.aux"
   "python.pdf"
   "python.log"
-  "python.aux"

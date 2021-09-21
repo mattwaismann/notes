@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  21 SEP 2021 10:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.28)  21 SEP 2021 11:24
 entering extended mode
 **c:/Users/mattwais/Desktop/notes/python/python.tex
 (c:/Users/mattwais/Desktop/notes/python/python.tex
@@ -126,19 +126,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
 [1
 
-{C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] (python.aux) ) 
+{C:/Users/mattwais/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+
+ []
+
+[4] [5] (python.aux) ) 
 Here is how much of TeX's memory you used:
- 2994 strings out of 478870
- 42510 string characters out of 2847414
+ 3040 strings out of 478870
+ 43009 string characters out of 2847414
  581966 words of memory out of 3000000
- 20934 multiletter control sequences out of 15000+600000
- 408217 words of font info for 43 fonts, out of 8000000 for 9000
+ 20980 multiletter control sequences out of 15000+600000
+ 408524 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,52p,415b,1667s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,6n,52p,447b,1667s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\mattwais\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mattwais/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on python.pdf (3 pages, 86912 bytes).
+Output written on python.pdf (5 pages, 99429 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
