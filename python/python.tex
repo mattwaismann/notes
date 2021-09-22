@@ -32,6 +32,47 @@
 %MAIN
 \begin{document}
 \maketitle
+
+\section{Structuring Python Projects}
+\subsection{Small Projects}
+For small projects a good structure can be:
+\begin{itemize}
+  \item constants.py - This where all the constants will live
+  \item helper.py - This is where all the functions/classes live
+  \item run.py - This is where the script lives and is run. Enclose the script in a function called run() and then call the script in main. This should look like:
+  \begin{itemize}
+    \item \begin{lstlisting}
+      if __name__ == '__main__':
+          run()
+    \end{lstlisting}
+  \end{itemize}
+\end{itemize}
+With projects organized in this way, the run.py file would need to import the constants and helper modules to access the functions, classes, and constants. So long as the helper and constant modules are in the same directory as the module importing them,
+they can be imported using \textit{import}. There are two approaches that can be taken here. The first approach involves importing the modules without the use of a \textit{*}. This requires we refer
+to the modules name or an assigned alias when calling classes or functions:
+\begin{lstlisting}
+  import constants
+  import helper
+
+  print(helper.check_if_prime(constants.EXAMPLE_PRIME_NUMBER))
+\end{lstlisting}
+\noindent The other approach invovles the use of the \textit{*}. If we use the \textit{*} when importing, then all the objects in the imported module
+will be automatically loaded into the programs namespace:
+\begin{lstlisting}
+  from constants import *
+  from helper import *
+
+  print(check_if_prime(EXAMPLE_PRIME_NUMBER))
+\end{lstlisting}
+
+While importing the objects into the namespace may be problematic for larger projects importing many modules, if careful, this approach should be perfectly fine.  
+
+\subsection{Large Projects}
+For large projects, a single helper and constants module could lead to massive modules which is never a best practice. Instead, it would a best practice would be to design something that mimics a
+Python package. A Python package holds all the source code for a project and has many subdirectories which typically have their own specific functionality.
+
+
+
 \section{Logging}
 Without logging, most people check the program behaved correctly by embedding print statements at various points in the script. The better practice is to use \textit{logging}. \\
 
