@@ -34,6 +34,41 @@
 \maketitle
 
 \section{Structuring Python Projects}
+
+
+\subsection{Some Context}
+
+In the simplest world, we would write Python programs directly in the Python
+interpreter and run the program there. However, if you quit from the
+interpreter and enter it again, the definitions you have made
+(functions, classes, variables etc.) are lost. Therefore, if you want to 
+write a somewhat longer program, you are better off using a text editor to
+prepare the input for the interpreter and running it with that file as input 
+instead. This file prepared in the text editor is known as a \textbf{script}.
+A script is generally a directly executable piece of code, run by itself.\\
+
+As the world becomes less simple, programs get larger, and holding all of your
+program on one file becomes infeasible, you may want to split that script 
+into many files. Note that these individual files may not necessarily be 
+scripts themselves. Instead, they might simply contain defintions and
+functionality intended to be used by some other file. In this event, instead of 
+redudantly copying and pasting that functionalityy into the file that wants it,
+Python has a way to use functionality-containing files in a script. Such a file 
+is called a \textbf{Module}. A module is a file containing Python definitions
+and statements. The file name is the module name with the suffix '.py' appended.
+Defintions from a module can be \textit{imported} into other modules or into 
+the \textit{main} module. \\
+
+Python makes no distinction between scripts and modules. These terms
+exist to draw a line between code that runs on its own and code that is used
+to help something else run. However, this line is not clearly defined, and a
+module can contain executable statements as well as definitions.
+Within a module (or script), the module's name (everything that precedes the
+'.py' suffix in the file name) (as a string) is available as the value of the
+global variable '\_\_name\_\_'. \\
+
+
+
 \subsection{Small Projects}
 For small projects a good structure can be:
 \begin{itemize}
@@ -50,14 +85,17 @@ For small projects a good structure can be:
 With projects organized in this way, the run.py file would need to import the constants and helper modules to access the functions, classes, and constants. So long as the helper and constant modules are in the same directory as the module importing them,
 they can be imported using \textit{import}. There are two approaches that can be taken here. The first approach involves importing the modules without the use of a \textit{*}. This requires we refer
 to the modules name or an assigned alias when calling classes or functions:
+
 \begin{lstlisting}
   import constants
   import helper
 
   print(helper.check_if_prime(constants.EXAMPLE_PRIME_NUMBER))
 \end{lstlisting}
+
 \noindent The other approach invovles the use of the \textit{*}. If we use the \textit{*} when importing, then all the objects in the imported module
 will be automatically loaded into the programs namespace:
+
 \begin{lstlisting}
   from constants import *
   from helper import *
@@ -66,12 +104,31 @@ will be automatically loaded into the programs namespace:
 \end{lstlisting}
 
 While importing the objects into the namespace may be problematic for larger projects importing many modules, if careful, this approach should be perfectly fine.  
+has many subdirectories which typically have their own specific functionality. Each of these subdirectories will need a \_\_init\_\_.py file (more on this later).
+
 
 \subsection{Large Projects}
-For large projects, a single helper and constants module could lead to massive modules which is never a best practice. Instead, it would a best practice would be to design something that mimics a
-Python package. A Python package holds all the source code for a project and has many subdirectories which typically have their own specific functionality.
+For large projects, a single helper and constants module is no longer practical.
+Instead, design something that mimics the structure of a Python package. 
+To allow for more organization, a Python package holds all its source code 
+in various subdirectories. Then modules inside these subdirectories can be 
+imported like:
 
+\begin{lstlisting}
+from my_models import lstm_model # OR
+import my_models.lstm_model
+\end{lstlisting}
 
+In addition, let's suppose that within the my\_models subdirectory and 
+lstm\_model module there exists a class (or any other object) called 
+TrainModel. Then we could just import that object with:
+
+\begin{lstlisting}
+  from my_models.lstm_model import TrainModel # OR
+  import my_models.lstm_model.TrainModel
+\end{lstlisting}
+
+In order for these subdirectories to be properly recognized
 
 \section{Logging}
 Without logging, most people check the program behaved correctly by embedding print statements at various points in the script. The better practice is to use \textit{logging}. \\
