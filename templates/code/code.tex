@@ -2,7 +2,11 @@
 \documentclass{article}% use option titlepage to get the title on a page of its own.
 \usepackage{blindtext} % a package for creating random text
 \usepackage{listings} % a package to embed code
-\usepackage{color} 
+\usepackage{color} % for colors 
+\usepackage[margin=1in]{geometry} %for widening margins 
+\usepackage{dirtree} % for representing a folder directory with a tree-style structure
+
+
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -25,7 +29,7 @@
   tabsize=3
 }
 
-\title{Blah}
+\title{Title}
 \date{August 13th, 2021}
 \author{Matt Waismann}
 
@@ -33,7 +37,17 @@
 \begin{document}
 \maketitle
 \section{Introduction}
+
 \begin{lstlisting}
     print("Hello World")
 \end{lstlisting}
+
+\dirtree{%
+.1 spam.
+.2 ham.
+.2 eggs.
+.3 more spam.
+.3 dead parrots.
+}
+
 \end{document}
