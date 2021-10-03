@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1633213388 "c:/Users/mattw/Desktop/notes/python/python.tex" "python.pdf" "python" 1633213389
+["pdflatex"] 1633216476 "c:/Users/mattw/Desktop/notes/python/python.tex" "python.pdf" "python" 1633234920
   "C:/Users/mattw/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1633211020 11548 3bc29cbf2d576c627d941a0491648254 ""
   "C:/Users/mattw/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1633211018 9728723 2570bf84e391fd63d5b176f5deeac288 ""
   "C:/Users/mattw/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1633213252 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -48,10 +48,10 @@
   "C:/Users/mattw/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty" 1623004943 204271 bae5b2d457283e99567249c1990510be ""
   "C:/Users/mattw/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty" 1623004942 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
   "C:/Users/mattw/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
-  "c:/Users/mattw/Desktop/notes/python/python.tex" 1633213388 14016 4fe8ed7a74dbb27c6fa661e574c9e292 ""
-  "python.aux" 1633213388 783 419b539b6846ff8b7ec70b5d7cc88c8a "pdflatex"
-  "python.tex" 1633213388 14016 4fe8ed7a74dbb27c6fa661e574c9e292 ""
+  "c:/Users/mattw/Desktop/notes/python/python.tex" 1633234909 14879 08912c03c97ca156ef38020292ceba9a ""
+  "python.aux" 1633216477 783 cfaf19ec97fd3d30e151458029be8d05 "pdflatex"
+  "python.tex" 1633234909 14879 08912c03c97ca156ef38020292ceba9a ""
   (generated)
-  "python.log"
-  "python.aux"
   "python.pdf"
+  "python.aux"
+  "python.log"

@@ -135,7 +135,27 @@ In order for these subdirectories to be properly recognized, you must include an
 subdirectories contain modules that can be imported. \\ 
 
 In reality, large PyPi packages are much more complex. Let's take a look at the structure
-of the \textit{scikit-learn} package on PyPi.
+of the \textit{scikit-learn} package on PyPi and disect some of the design decisions. Within
+the scikit-learn repoistory there are several files and subdirectories. Here's a sample of that:
+\dirtree{%
+.1 scikit-learn.
+  .2 examples \DTcomment{a directory with sample code using scikit-learn}.
+    .3 classification.
+      .4 plot\_gradient\_boosting\_early\_stopping.py.
+    .3 cluster.
+    .3 ensemble.
+    .3 feature\_selection.
+  .2 README.rst \DTcomment{ .rst is a markup file type which commonly used for Python docs}.
+  .2 sklearn \DTcomment{the library's source code}.
+    .3 \_\_check\_build \DTcomment{sub-directory for giving helpful messages for scikit-learn compile errors}.
+      .4 \_\_init\_\_.py.
+      .4 \_check\_build.pyx \DTcomment{ .pyx supports using Cython for C-Extensions in Python}.
+      .4 setup.py \DTcomment{ packaging  using distutils (often used for installing Python packages)}.
+      .4 covariance .
+        .5 \_\_init\_\_.py.
+}
+
+
 
 
 
