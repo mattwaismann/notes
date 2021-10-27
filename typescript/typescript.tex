@@ -1,0 +1,217 @@
+%PREAMBLE
+\documentclass{article}% use option titlepage to get the title on a page of its own.
+\usepackage{blindtext} % a package for creating random text
+\usepackage{listings} % a package to embed code
+\usepackage{color} 
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{TypeScript}
+\date{October 26th, 2021}
+\author{Matt Waismann}
+
+%MAIN
+\begin{document}
+\maketitle
+\section{Introduction}
+TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript's
+features, and an additional layer on top: TypeScript's type system. \\
+
+For example, JavaScript provides language primitives like \textit{string} and \textit{number}, but
+it doesn't check that you've consistently assigned these. TypeScript does. \\
+
+\section{Types by Inference}
+TypeScript knows the JavaScript language and will generate types for you in many cases.
+For example, in creating a variable and assigning it to a paritcular value, TypeScript
+will use the value as its type.
+\begin{lstlisting}
+  let helloWorld = "Hello World";
+  console.log(typeof helloWorld); 
+  //[LOG]: "string" 
+\end{lstlisting}
+
+\section{let, var, and const variable declarations}
+What is \textit{let}? In JavaScript,
+there's several ways to declare variables. Those desclared by the
+\textit{var} keyword are scoped to the immediate function body(hence the function scope) while
+\textit{let} variables are scoped to the immediate enclosing clock denoted by \textit{\{\} }.
+The reason why \textit{let} was introduced to the language was because function scope is confusing
+and was one of the main sources of bugs in JavaScript. \\
+
+At the top level, \textit{let}, unlike \textit{var}, does not create a property on the global object:
+\begin{lstlisting}
+  var foo = "Foo"; //globally scoped
+  let bar = "Bar"; // not allowed to be globally scoped
+
+  console.log(window.foo); // Foo
+  console.log(window.bar); // undefined
+\end{lstlisting}
+
+Another motivation for let statements is to free up memory when not needed in a ceratin block. It's encouraged
+that variables are existent only where they are needed. \\ \\
+
+Variables can be declared using \textit{const} similar to var or let declarations. The const makes a variable a constant where its value cannot be changed.
+Const variables have the same scoping rules as \textit{let} variables (block scoped). Const declares a variable that is immutable. The main argument for using
+\textit{const} is for the readability of your code. It signals to the reader that you're not going to assign to the variable. This is also in line with the "principle
+of least privilege'
+
+\section{Defining Types}
+To create an object with an inferred type which includes \textit{name: string} and
+\textit{id: number}, you can write:
+\begin{lstlisting}
+  const user = {
+    name: "Hayes",
+    id: 0,
+  };
+\end{lstlisting}
+You can explicity describe this object's shape (yes shape) using an \textit{interface} declaration:
+\begin{lstlisting}
+  interface User {
+    name: string;
+    id: number;
+  }
+\end{lstlisting}
+You can then declare that a JavaScript object conforms to the shape your new interface by using syntax like \textit{: TypeName} after a variable declaration:
+\begin{lstlisting}
+  const user: User = {
+    name: "Hayes",
+    id: 0,
+  };
+\end{lstlisting}
+If you provide an object that doesn't match the interface you have provided, 
+TypeScript will warn you.
+
+Since JavaScript supports classes and object-oriented programming, so does TypeScript. You can use an interface declaration with classes:
+\begin{lstlisting}
+  interface User {
+    name: string;
+    id: number;
+  }
+
+  class UserAccount{
+    name: string;
+    id: number:
+
+    constructor(name: string, id: number) {
+      this.name = name;
+      this.id = id;
+    }
+  }
+
+  const user: User = new UserAccount("Murphy", 1);
+\end{lstlisting}
+
+You can use interfaces to annotate parameters and return values to functions:
+
+\begin{lstlisting}
+  function getAdminUser(): User {
+    // ...
+  }
+
+  function deleteUser(user: User) {
+    // ...
+  }
+\end{lstlisting}
+
+There is already a small set of primitive types available in JavaScript: \textit{boolean}, \textit{bigint},
+\textit{null}, \textit{number}, \textit{string}, \textit{symbol}, and \textit{undefined}, which you can use in
+an interface. TypeScript extends this list with a few more, such as \textit{any} (allow anything), \textit{unkown} (ensure someone using this type declares what the type is), \textit{never} (it's not possible that this type could happen), and \textit{void} (a
+function which returns \textit{undefined} or has no return value).  \\ \\
+
+The \textit{==} operator in JavaScript (and hence TypeScript) can do unexpected type conversions. In Javascript \textit{1==1} is \textit{true}. The \textit{===} operator avoids this. Comparing different types with 
+\textit{===} is always false.
+
+\section{Primative Types}
+In Java, primative types are the most basic data types available within the Java language. There are 8: \textbf{boolean, byte, char, short, int, long, float, and double}.These types serve as the building blocks of data
+manipulation in Java. Such types serve only one purpose - containing pure, simple values of a kind. \\ 
+
+In Python, there are only four primitive data types \textbf{Integer, Float, String, and Boolean}. \\
+
+In JavaScript, there are 7 primitive data types: \textbf{string, number, bigint, boolean, undefined, symbol, and null}. 
+
+\section{Enums}
+Enums are one of the few features TypeScript has which is not a type-level extension of JavaScript. 
+
+Enums allow a developer to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript provides both numeric and string-based enums.
+
+\begin{lstlisting}
+  enum Direction {
+    Up = 1,
+    Down,
+    Left
+    Right,
+  }
+\end{lstlisting}
+Above, we have a numeric enum where \textit{Up} is initialized with \textit{1}. All of the other following members are auto-incremented from that point on. In other words, 
+\textit{Direction.Up} has the value \textit{1}, \textit{Down} has \textit{2}, \textit{left} has \textit{3}, and so on. In fact, if we didn't even initialize anything then \textit{Up} would start with 0, \textit{Down} with \textit{1} and so on.
+This auto-incrementing behavior is useful for cases where we might not care about the member values themselves, but do care that each value is distinct from other values in the same enum. \\
+
+Using an enum is simple: just access any member as a property off of the enum itself, and declare types using the name of the enum:
+
+\begin{lstlisting}
+  enum UserResponse {
+    No = 0,
+    Yes = 1,
+  }
+
+  function respond(recipient: string, message: UserResponse): void {
+    // ..
+  }
+
+  respond("Princess Caroline", UserResponse.Yes);
+\end{lstlisting}
+
+String enums are a similar concept but don't have auto-incrementing behavior
+\begin{lstlisting}
+  enum Direction{
+    Up = "UP",
+    Down = "DOWN",
+    left = "LEFT",
+    right = "RIGHT"
+  }
+\end{lstlisting}
+Each enum member has a value associated with it which can be either constant or computed.
+
+\section{Objects vs Enums}
+In modern TypeScript, you may not need an enum when an object with \textit{as const} could suffice:
+\begin{lstlisting}
+  const enum EDirection{
+    Up,
+    Down,
+    Left,
+    Right,
+  }
+
+  const ODirection = {
+    Up: 0,
+    Down: 1,
+    Left: 2,
+    Right: 3,
+  } as const;
+
+\end{lstlisting}
+
+The biggest argument against using enums is that since JavaScript does not contain enums, so your codebase cannot be aligned
+with the state of JavaScript.
+
+
+\end{document}
