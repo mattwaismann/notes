@@ -310,4 +310,30 @@ Now you can raise a new exception like any other exception:
     if self.__temperature > 85:
         raise CoffeeTooHotException("Coffee too hot")
 \end{lstlisting}
+
+\section{Setup.py and Setup.cfg}
+Setup.py is used when creating a Python package. Here's a sample of it
+\begin{lstlisting}
+  from setuptools import setup
+  from setuptools import find_packages #searchs over file system and look for things that have __init__.py files 
+
+  #setup is metadata for our package
+  setup(
+    name = 'hello-world'
+    version = '1.0.0'
+    description = 'this package contains some sample hello world code',
+    author = 'Matt Waismann'
+    author_email = 'mattwaismann@gmail.com'
+    url = 'https://github.com/mattwaismann',
+    packages = ['hello_world', 'hello_world_modules', 'testing'],
+    #packages = find_packages(), will automatically find the subdirectories
+    entry_points = {
+      'console_scripts': [
+        'hello-world-cli = hello_world.main:main', #subdirectory.file_name:function_name
+      ]
+    }
+  )
+\end{lstlisting}
+While the setup.py file is helpful, some consider it bad style to put too much logic in setup.py. On the other hand,
+setup.cfg (which is declarative by design) has become more popular for packaging. It is an alternative to setup.py.
 \end{document}
